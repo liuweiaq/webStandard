@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OSO</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<!-- 可选的Bootstrap主题文件 -->
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.min.css">
+	<!-- 主样式表 -->
+	
+	<link rel="stylesheet" href="css/docs.css">
+</head>
+<body>
+	<!--网站头部开始-->
+	<header class="navbar navbar-static-top oso-docs-nav" id="top" role="banner">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#oso-navbar" aria-controls="oso-navbar" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a href="../" class="navbar-brand">OSO FD</a>
+	    </div>
+	    <nav id="oso-navbar" class="collapse navbar-collapse">
+	      <ul class="nav navbar-nav">
+	        <li>
+	          <a href="index.html" onclick="_hmt.push(['_trackEvent', 'docv3-navbar', 'click', 'V3导航-起步'])">Html</a>
+	        </li>
+	        <li>
+	          <a href="#" onclick="_hmt.push(['_trackEvent', 'docv3-navbar', 'click', 'V3导航-全局CSS样式'])">Css</a>
+	        </li>
+	        <li class="active">
+	          <a href="#" onclick="_hmt.push(['_trackEvent', 'docv3-navbar', 'click', 'V3导航-组件'])">JavaScript</a>
+	        </li>
+	      </ul>
+	    </nav>
+	  </div>
+	</header>
+	<!--网站头部结束-->
+	<!--banner开始-->
+	<div class="oso-docs-header">
+		<div class="container">
+			<h1>编码规范</h1>
+			<p>编写灵活、稳定、高质量的 HTML 、CSS 和 JavaScript 代码的规范。</p>
+		</div>
+	</div>
+	<!--banner结束-->
+	<!--主体内容开始-->
+	<div class="container">
+		<div class="row">
+			<!--左侧导航开始-->
+			<div class="col-md-3 oso-docs-list" role="complementary">
+			    <nav class="oso-docs-sidebar hidden-print hidden-xs hidden-sm">
+			        <ul class="nav oso-docs-sidenav">			              
+			            <li>
+						  <a href="#overview">概述</a>
+						  <ul class="nav">
+						    <li><a href="#overview-doctype">本规范制定原则</a></li>
+						    <li><a href="#overview-mobile">适用范围</a></li>
+						    <li><a href="#overview-type-links">总体要求</a></li>
+						  </ul>
+						</li>
+						<li>
+						  <a href="#grid">命名规范</a>
+						  <ul class="nav">
+						    <li><a href="#grid-intro">术语定义</a></li>
+						    <li><a href="#grid-media-queries">命名的基本原则</a></li>
+						    <li><a href="#grid-options">各成员命名方法</a></li>
+						  </ul>
+						</li>
+						<li>
+						  <a href="#type">代码注释规范</a>
+						  <ul class="nav">
+						    <li><a href="#type-headings">注释原则</a></li>
+						    <li><a href="#type-body-copy">注释样式</a></li>
+						  </ul>
+						</li>
+						<li>
+						  <a href="#code">JavaScript及库使用规范</a>
+						  <ul class="nav">
+						    <li><a href="#code-inline">原生 JavaScript 使用约定</a></li>
+						    <li><a href="#code-block">jquery使用约定</a></li>
+						    <li><a href="#code-appointment">RequireJS使用约定</a></li>
+						    <li><a href="#code-appointment2">Backbone使用约定</a></li>
+						    <li><a href="#code-iframe">其他JS框架的使用</a></li>
+						  </ul>
+						</li>									              
+			        </ul>	
+			        <a class="back-to-top" href="#top">返回顶部</a>		            
+			    </nav>
+			</div>
+			<!--左侧导航结束-->
+			<!--右侧内容开始-->
+			<div class="col-md-9 oso-docs-list">
+				<div class="oso-docs-section">
+  					<h1 id="overview" class="page-header">概述</h1>  					
+  					<h2 id="overview-doctype">本规范制定原则</h2>
+  					<p>方便代码的交流和维护；不影响编码的效率，不与大众习惯冲突；使代码更美观、阅读更方便； 使代码的逻辑更清晰、更易于理解。</p>
+  					<h2 id="overview-mobile">适用范围</h2>
+  					<p>本规范主要适用于书写JavaScript代码的Web前端开发人员。</p>  					
+  					<h2 id="overview-type-links">总体要求</h2>
+				  	<ul>
+					    <li>如无特殊说明，JS代码至少需要兼容<code>chrome，firefox，ie9</code>及以上版本浏览器；</li>
+					    <li>所有文件需统一采用UTF-8无BOM编码；</li>
+					    <li>避免每一行超过80个字符，当一条语句一行写不下时，需要考虑折行书写；</li>
+					    <li>代码组织应该清晰易懂，缩进单位为四个空格，不能使用tab键进行缩进；</li>
+					    <li>JavaScript程序应独立保存在后缀名为.js的文件中，不能包含在HTML文件中；</li>
+					    <li>本文档规定所有<code>JavaScript</code>代码均须在严格模式(“<code>use strict</code>”)下运行，有关严格模式的要求请查阅相关文档；</li>
+					    <li>为方便后续代码编写及程序调试，需搭建以下基本软件环境：<code>node.js</code>(JavaScript运行环境，是其他环境运行的基础)、<code>bower</code>(包管理工具)、<code>handlebars.js</code>(JS模板引擎)、<code>grunt</code>(项目构建工具)、<code>Nginx</code>(HTTP和反向代理服务器)等，环境搭建教程见其他相关文档；</li>
+					    <li>JS库引入：原则上仅能引用<code>Jquery</code>(JavaScript库)、<code>RequireJS</code>(AMD模块化管理工具)、<code>Backbon</code>(JavaScript的MVC框架)、<code>BootStrap</code>(响应式布局插件)四种JS库，若需要引入其他第三方库, 须与团队其他成员讨论决定。</li>
+				  	</ul>				  
+				</div>
+				<div class="oso-docs-section">
+  					<h1 id="grid" class="page-header">命名规范</h1>
+  					<h2 id="grid-intro">术语定义</h2>
+  					<ul>
+  						<li><code>Pascal</code>大小写：<br/>将标识符的首字母和后面连接的每个单词的首字母都大写。可以对三字符或更多字符的标识符使用<dode>Pascal</dode>大小写。例如：BackColor。</li>
+  						<li><code>Camel</code>大小写：<br/>标识符的首字母小写，而每个后面连接的单词的首字母都大写。例如：backColor。</li>
+  						<li>全大写：<br/>标识符的所有字母都大写。例如：PI。</li>
+  					</ul>
+  					<h2 id="grid-media-queries">命名的基本原则</h2>
+  					<ul>
+  						<li>JavaScript命名的总体原则是：尽量与原生JavaScript中命名规则相同。</li>
+  						<li>名称均须使用具有实际含义的英文单词命名，不能使用JavaScript关键字，拒绝使用拼音等中式命名方法，产生歧义。</li>
+  						<li>允许使用公认英文缩写，如：<code>getXML()</code>。</li>
+  						<li>一般而言，方法、事件名称须是动词短语，其他命名按需求使用形容词或名词短语。</li>
+  						<li>除常量名称外，其他所有名称两个单词之间均不能用下划线连接。如：<code>first_Name</code>。</li>
+  					</ul>
+  					<h2 id="grid-options">各成员命名方法</h2>  					
+  					<ul>
+  						<li>JavaScript文件名：<br/>JavaScript文件名需是名词短语，采用Camel命名法。如：countryModel.js。</li>
+  						<li>类名：<br/>类名都是名词短语，采用Pascal命名法。如：Person。</li>
+  						<li>方法(函数)名：<br/>方法采用动词短语，Camel方法进行命名。如：sayHi()。</li>
+  						<li>属性名：<br/>属性名是名词短语，采用Camel方法进行命名。如：name。</li>
+  						<li><p class="oso-distance">变量名：<br/>如无特殊说明，变量名的命名规范符合字段、私有变量、方法参数等的命名要求。<br/>
+  						①变量名均是名词短语，符合Camel命名规范。如：age。<br/>②类的私有字段、私有属性、私有方法等成员的命名须在名称前加下划线(与公有成员进行区分)。如：_height;_getSize()。<br/>③变量名可以加前缀(如下表所示)，表示特定含义。<p>
+	  						<table class="table table-bordered">
+	  							<thead>
+								    <tr>
+									  <th class="success">前缀名</th>
+									  <th class="success">含义</th>
+									  <th class="success">示例</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+									  <td class="active">is</td>
+									  <td class="active">变量为布尔类型</td>
+									  <td class="active">isNumber</td>
+									</tr>
+									<tr>
+									  <td class="active">str</td>
+									  <td class="active">变量为字符串类型</td>
+									  <td class="active">/</td>
+									</tr>
+									<tr>
+									  <td class="active">arr</td>
+									  <td class="active">变量为数组</td>
+									  <td class="active">/</td>
+									</tr>
+									<tr>
+									  <td class="active">obj</td>
+									  <td class="active">变量为对象</td>
+									  <td class="active">/</td>
+									</tr>
+									<tr>
+									  <td class="active">num</td>
+									  <td class="active">变量为数字</td>
+									  <td class="active">/</td>
+									</tr>
+									<tr>
+									  <td class="active">$</td>
+									  <td class="active">变量为Jquery对象</td>
+									  <td class="active">$element</td>
+									</tr>
+									<tr>
+									  <td class="active">_</td>
+									  <td class="active">类的私有成员(字段、属性、方法等)</td>
+									  <td class="active">_ height</td>
+									</tr>
+								</tbody>
+							</table>
+							<p class="oso-distance">注：1)只有当需要特别说明其类型或用途的变量名才加前缀，所加前缀与后面名称组合的变量名要含义清晰；2)切记不要乱用前缀，如strName,numAge等有画蛇添足之嫌；3)前缀名仅限于以上几种，不能使用其他简写前缀名，以免产生歧义.<br/>④在局部变量或参数名中，可以用下表中的简写代表特定的含义(如下表所示)。</p>
+							<table class="table table-bordered">
+								<thead>									
+								    <tr>
+									  <th class="success">简写</th>
+									  <th class="success">含义</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+									  <td class="active">o</td>
+									  <td class="active">表示Object</td>
+									</tr>
+									<tr>
+									  <td class="active">e</td>
+									  <td class="active">表示Event</td>
+									</tr>
+									<tr>
+									  <td class="active">el</td>
+									  <td class="active">表示Element</td>
+									</tr>
+									<tr>
+									  <td class="active">elem</td>
+									  <td class="active">表示Element</td>
+									</tr>
+								</tbody>
+							</table>						 
+	  						<p>注：1)在代码中，上述四个名称不能再代表其他的含义；2)只有在局部变量和参数名中才能使用上述简写命名。</p>
+  						</li>
+  						<li>常量名：<br/>常量使用全大写方法命名，如PI。注：常量名如果由几个单词组成，单词之间用下划线连接起来。</li>
+  					</ul>
+				</div>
+				<div class="oso-docs-section">
+  					<h1 id="type" class="page-header">代码注释规范</h1>
+  					<h2 id="type-headings">注释原则</h2>
+  					<ul>
+  						<li><span>注释形式必须统一：</span><span>必须使用本文档规定的标点和结构的样式来构造注释。注释格式如下：</span><span>①单行注释：”//…..”；</span><span>②块注释：”/*………*/”。</span><span>注：具体各代码段的注释样式，见本章注释样式。</span></li>
+  						<li><span>注释内容要简单、明了、含义准确，防止注释的多义性，错误的注释不但无益反而有害。</span><span>注：文件头这里不做约定，有git版本控制，就知道文件的基本信息，而且一般开发人员对于文件头的维护不及时，容易造成错落。</span></li>
+  						<li><span>基本注释部分需符合JSDoc语法规范。</span><span class="oso-distance">JSDoc是JavaScript语言的一套代码注释规范，其主要命令名如下表所示：</span>
+  							<table class="table table-bordered">
+  								<thead>
+								    <tr>
+									  <th class="success">命令名</th>
+									  <th class="success">描述</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+									  <td class="active">@param</td>
+									  <td class="active">指定参数名和说明来描述一个函数参数</td>
+									</tr>
+									<tr>
+									  <td class="active">@return</td>
+									  <td class="active">函数的返回值</td>
+									</tr>
+									<tr>
+									  <td class="active">@type</td>
+									  <td class="active">函数的返回类型</td>
+									</tr>
+									<tr>
+									  <td class="active">@author</td>
+									  <td class="active">代码的作者</td>
+									</tr>
+									<tr>
+									  <td class="active">@example</td>
+									  <td class="active">范例</td>
+									</tr>								
+									<tr>
+									  <td class="active">@description</td>
+									  <td class="active">说明</td>
+									</tr>																
+									<tr>
+									  <td class="active">@default</td>
+									  <td class="active">默认值</td>
+									</tr>																
+									<tr>
+									  <td class="active">@see</td>
+									  <td class="active">描述相关的资源</td>
+									</tr>
+								</tbody>
+							</table>
+							<span>注：这里我们只是列出了常用的标签，了解更多标签，可以登陆到官方网站查看(http://code.google.com/p/jsdoc-toolkit/wiki/TagReference)。</psan>	
+  						</li>
+  					</ul>
+  					<h2 id="type-body-copy">注释样式</h2>
+  					<p>本文档根据注释内容的不同，将代码注释分为基本注释和特殊必加注释两种。这里需要特别说明的一点是：代码中不必每一处都添加注释，但对需要重点说明的地方，一定要合理安排注释内容。</p>
+  					<ul>
+  						<li><span>基本注释：</span><span>本文档中，基本注释包括类、方法、属性、主要变量等的注释。这部分内容是JS代码的基本组成部分，这部分内容需要用块注释格式。</span><span class="oso-distance">①类的注释：</span>
+						<div class="highlight"><pre><span class="nt">/**</span><span >* @description 一个Person类</span><span >* @param {String} userName 姓名</span><span >* @example new Parent(“张三”,15);</span><span class="nt">**/</span></pre></div>
+						<span>②方法的注释：</span><span class="oso-distance">方法的注释需包含的内容有：</span>
+						<div class="highlight"><pre><span class="nt">/**</span><span >* @description 弹出say内容</span><span >* @pparam {String} content 内容</span><span >* @return {String} json格式数据</span><span class="nt">**/</span></pre></div>
+						<span>③属性和字段的注释：</span><span class="oso-distance">属性和字段的注释需包含的内容有：</span>
+						<div class="highlight"><pre><span class="nt">/**</span><span >* @description 弹出say内容</span><span >* @description {Sting} 姓名</span><span class="nt">**/</span></pre></div></li>
+  						<li><span>特殊必加注释：</span><span>除了基本注释外，代码中有以下情形之一者，也需要添加注释：</span><span>①典型算法处；</span><span>②代码不明晰处；</span><span>③代码修改处需要加上修改标识的地方；</span><span>④循环和逻辑分支组成的代码中；</span><span>⑤为他人提供的接口。</span><span>这部分注释只需用行注释格式，简洁准确地标明注释内容即可。</span></li>
+  					</ul>
+				</div>
+				<div class="oso-docs-section">
+  					<h1 id="code" class="page-header">JavaScript及库使用规范</h1>
+  					<h2 id="code-inline">原生 JavaScript使用约定</h2>
+  					<ul>
+  						<li><span>每一条JavaScript语句都要以分号结束：</span><span>严格按照语法规范书写代码，保证代码在压缩后不会出错。</span></li>
+  						<li><span>变量定义：</span><span class="oso-distance">在类、方法体顶端定义所有变量，var语句应该为类或方法体内的第一条语句。同时定义多个变量时，省略var关键字，用逗号代替。</span>
+  							<table class="table table-bordered">
+  								<thead>
+	  								<tr>
+	  									<th class="success">Bad Code</th>
+	  									<th class="success">Good Code</th>
+	  								</tr>
+  								</thead>
+  								<tbody>
+	  								<tr>
+	  									<td class="active">var someItem = 'some string';</td>
+	  									<td class="active">var someItem = 'some string';</td>
+	  								</tr>  								
+	  								<tr>
+	  									<td class="active">var anotherItem = 'another string';</td>
+	  									<td class="active">var anotherItem = 'another string';</td>
+	  								</tr> 								
+	  								<tr>
+	  									<td class="active">var oneMoreItem = 'one more string';</td>
+	  									<td class="active">var oneMoreItem = 'one more string';</td>
+	  								</tr>
+  								</tbody>
+  							</table>
+  						</li>
+  						<li><span>使用”===”代替”==”：</span><span>JavaScript 使用2种不同的等值运算符：===|!== 和 ==|!=，后者附带强制类型转换，为了避免出现比较时的错误，统一使用前者作为JS代码中的等值运算符。</span></li>
+  						<li><span>使用 join() 来拼接字符串：</span><span class="oso-distance">字符串的拼接在开发中会经常遇到，用“+=”的方式来拼接字符串的效率非常的低。因此在大量拼接时，规定统一使用数组的“.join()”方法来拼接字符串。如：</span>
+  							<div class="highlight"><pre><code class="language-html" data-lang="html"><span >var array = [];</span><span >for(var i = 0; i &lt; 10000; i++){</span><span >   array[i] = "&lt;input type='button' value='a'&gt;";</span><span >}</span><span >document.getElementById("one").innerHTML = array.join("");</span></code></pre></div>
+  						</li>
+  						<li><span>使用{}代替 new Ojbect()，使用[]代替 new Array()</span><span>对象和数组分别有上述两种创建方式，本文档规定统一使用{}和[]来创建对象或数组。</span></li>
+  						<li><span>尽量避免全局变量</span><span class="oso-distance">将多个全局变量定义在一个命名空间下时，将增大变量污染的可能性。</span>
+  							<table class="table table-bordered">
+  								<thead>
+	  								<tr>
+	  									<th class="success">Bad Code</th>
+	  									<th class="success">Good Code</th>
+	  								</tr>
+  								</thead>
+  								<tbody>
+	  								<tr>
+	  									<td class="active">var name = 'Jeffrey';<br/>var lastName = 'Way';<br/>function doSomething() {...}<br/>console.log(name);<br/>//Jeffrey或window.name</td>
+	  									<td class="active">var DudeNameSpace = {<br/>name : 'Jeffrey',<br/>lastName : 'Way',<br/>doSomething : function() {...}<br/>}<br/>console.log(DudeNameSpace.name);<br/>// Jeffrey</td>
+	  								</tr>
+  								</tbody>
+  							</table>
+  						</li>
+  						<li><span>选择短路求值：</span><span class="oso-distance">短路求值是一个从左到右求值的表达式，用&&（逻辑与）或 || （逻辑或）操作符。</span>
+  							<table class="table table-bordered">
+  								<thead>
+	  								<tr>
+	  									<th class="success">Bad Code</th>
+	  									<th class="success">Good Code</th>
+	  								</tr>
+  								</thead>
+  								<tbody>
+	  								<tr>
+	  									<td class="active">function initVar($myVar) {<br/>if(!$myVar) {<br/>$myVar = $('#selector');<br/>}<br/>}</td>
+	  									<td class="active">function initVar($myVar) {<br/>$myVar = $myVar || $('#selector');<br/>lastName : 'Way',<br/>}</td>
+	  								</tr>
+  								</tbody>
+  							</table>
+  						</li>
+  					</ul>
+  					<h2 id="code-block">jquery使用约定</h2>
+  					<p>本文档规定可以使用JavaScript第三方库jquery，包括所有以jquery为基础开发的其他插件。</p>
+				  	<ul>
+					    <li><span>缓存jquery对象</span><span class="oso-distance">DOM遍历需要耗费较多资源，所以应将重用jquery对象进行缓存，避免同一段代码中重复进行DOM遍历。</span>
+					    	<table class="table table-bordered">
+  								<thead>
+	  								<tr>
+	  									<th class="success">Bad Code</th>
+	  									<th class="success">Good Code</th>
+	  								</tr>
+  								</thead>
+  								<tbody>
+	  								<tr>
+	  									<td class="active">var h = $('#element').height();<br/>$('#element').css('height',h-20);</td>
+	  									<td class="active">function initVar($myVar)<br/>var h = $element.height();<br/>$element.css('height',h-20);</td>
+	  								</tr>
+  								</tbody>
+  							</table>
+					    </li>
+					    <li><span>采用链式写法</span><span class="oso-distance">采用链式写法时，jquery会自动缓存每一步的结果，比非链式写法（手动缓存）要快。</span>					  
+					    	<table class="table table-bordered">
+  								<thead>
+	  								<tr>
+	  									<th class="success">Bad Code</th>
+	  									<th class="success">Good Code</th>
+	  								</tr>
+  								</thead>
+  								<tbody>
+	  								<tr>
+	  									<td class="active">$second.html(value);<br/>$second.on('click',function(){<br/>alert('hello everybody');<br/>});<br/>$second.fadeIn('slow');<br/>$second.animate({height:'120px'},500);</td>
+	  									<td class="active">$second.html(value);<br/>$second.on('click',function(){<br/>alert('helloeverybody');<br/>}).fadeIn('slow') .animate({height:'120px'},500);</td>
+	  								</tr>
+  								</tbody>
+  							</table>
+  							<span>注：使用链式的同时，可能带来代码的难以阅读等问题，这时，需要严格按照规范对代码格式进行调整。</span>
+					    </li>
+					    <li><span>优化选择器</span><span>①根据选择器的性能差异，优先选择性能高的选择器来确定元素。</span><span class="oso-distance">②检查选择条件，不要添加额外的选择符。</span>
+					    	<table class="table table-bordered">
+  								<thead>
+	  								<tr>
+	  									<th class="success">Bad Code</th>
+	  									<th class="success">Good Code</th>
+	  								</tr>
+  								</thead>
+  								<tbody>
+	  								<tr>
+	  									<td class="active">$('div#myid');<br/>$('div#footer a.myLink');<br/>$('#outer #inner');//避免多个ID选择符</td>
+	  									<td class="active">$('#myid');<br/>$('#footer .myLink');<br/>$('#inner');</td>
+	  								</tr>
+  								</tbody>
+  							</table>
+  							<span>③不要使用通用选择符或隐式通用选择符，将通用选择符放到后代选择符中，性能非常糟糕。</span>
+  							<table class="table table-bordered">
+  								<thead>
+	  								<tr>
+	  									<th class="success">Bad Code</th>
+	  									<th class="success">Good Code</th>
+	  								</tr>
+  								</thead>
+  								<tbody>
+	  								<tr>
+	  									<td class="active">$('.container > *');<br/>$('.someclass :radio');//隐式通用选择符</td>
+	  									<td class="active">$('.container').children();<br/>$('.someclass input:radio');</td>
+	  								</tr>
+  								</tbody>
+  							</table>
+					    </li>
+					    <li><span>尽量减少DOM结构的改动次数</span><span class="oso-distance">如果要多次改动DOM结构(大量的DOM操作)，需先把要改动的部分取出来，改动完成后再放回去。这样能尽量减少DOM操作的次数。</span>
+					    	<table class="table table-bordered">
+  								<thead>
+	  								<tr>
+	  									<th class="success">Bad Code</th>
+	  									<th class="success">Good Code</th>
+	  								</tr>
+  								</thead>
+  								<tbody>
+	  								<tr>
+	  									<td class="active">var topList= [...];<br/>// 这里是100个字符串的数组<br/>$mylist=$("#mylist");<br/>for (var i=0, l= topList.length; i&lt;l; i++){<br/>$mylist.append("&lt;li&gt;" + topList[i] + "&lt;/li&gt;");<br/>//100次DOM操作<br/>}</td>
+	  									<td class="active">var topList= [...];<br/>$mylist = $("#mylist");<br/>topLi = ""; //这个变量用来存储变化的字符串;<br/>for (var i=0, l= topList.length; i&lt;l; i++){<br/>topLi += "&lt;li&gt;" + topList[i] + "&lt;/li&gt;";<br/>} <br/>$mylist.html(topLi);//DOM操作只有这么一次</td>
+	  								</tr>
+  								</tbody>
+  							</table>
+					    </li>
+					    <li><span>使用”on”方法</span><span class="oso-distance">在新版jQuery中，更短的 on(“click”) 用来取代类似 click() 这样的函数。在之前的版本中on()就是bind()。自从jQuery 1.7版本后，on() 是附加事件处理程序的首选方法。出于一致性考虑，规定全部使用 on()方法。</span>
+					    	<table class="table table-bordered">
+  								<thead>
+	  								<tr>
+	  									<th class="success">Bad Code</th>
+	  									<th class="success">Good Code</th>
+	  								</tr>
+  								</thead>
+  								<tbody>
+	  								<tr>
+	  									<td class="active">$first.click(function(){<br/>$first.css('border','1px solid red');<br/>$first.css('color','blue');<br/>});<br/>$first.hover(function(){<br/>$first.css('border','1px solid red');<br/>})</td>
+	  									<td class="active">$first.on('click',function(){<br/>$first.css('border','1px solid red');<br/>$first.css('color','blue');<br/>})<br/> $first.on('hover',function(){<br/>$first.css('border','1px solid red');<br/>})</td>
+	  								</tr>
+  								</tbody>
+  							</table>
+					    </li>
+				  	</ul>
+				  	<h2 id="code-appointment">RequireJS使用约定</h2>
+				  	<p>RequireJS是一个遵守AMD规范的客户端模块管理工具库，其基本思想是：通过define方法将代码定义为模块；通过require方法实现代码的模块加载。</p>
+				  	<ul>
+				  		<li>
+				  			<span>定义模块</span><span>每一个模块均须定义在一个单独的JS文件里(注：本节中，如无特别说明，模块两字均表示这种)，根据模块依赖情况和用途的不同，定义形式也有所区别：</span><span>①数据模块</span><span class="oso-distance">这类模块不需要依赖其他任何模块，一般用于存放数据。如：</span>
+					  		<div class="highlight"><pre><code class="language-html" data-lang="html"><span >define({</span><span >    addUrl:"/Sync10/basicdata/countrys/addCountry",</span><span >    modUrl:"/Sync10/basicdata/countrys/updateCountry",</span><span >    getUrl:"/Sync10/basicdata/countrys/getCountry"</span><span >});</code></pre></div>
+					  		<span id="code-regulation">②代码模块</span><span class="oso-distance">被定义的模块需依赖其他模块。除数据模块外，其他模块都使用这种方法定义。如：</span>
+					  		<div class="highlight"><pre><code class="language-html" data-lang="html"><span >define(['module1','module2'],function(m1,m2){</span><span >    ......</span><span >});</span></code></pre></div>
+				  		</li>
+				  		<li>
+				  			<span>调用模块</span><span>模块调用根据目的的不同，也有两种调用方式：</span><span>①执行入口</span><span class="oso-distance">mian.js中的程序执行入口处，用require方法调用模块，其参数与define方法类似。如：</span>
+				  			<div class="highlight"><pre><code class="language-html" data-lang="html"><span >require(['requireConfig'],function(requireConfig){</span><span >    ......</span><span >});</span></code></pre></div>
+				  			<span>②依赖注入</span><span>除程序执行入口外，其他模块均通过依赖注入的方式被新模块调用。调用方式采用本节<a href="#code-regulation">代码模块</a>中的规范。</span>
+				  		</li>
+				  		<li>
+				  			<span>配置require.js</span><span class="oso-distance">require方法本身也是一个对象，它带有一个config方法，用来配置require.js运行参数。config配置方法请参阅相关文档，示例如下：</span>
+				  			<div class="highlight"><pre><code data-lang="html"><span>requirejs.config({</span><span >    paths:{</span><span >        "oso.lib":"/Sync10-ui/lib"</span><span>    },</span><span >    shim: {</span><span>        'jquery.dynamicTable': ['jquery']</span><span>    }</span><span>});</span></code></pre></div>
+				  		</li>
+				  		<li>
+				  			<span>模块化总体规范</span><span>除了满足上述模块定义、模块调用以及配置等基本规范外，每一个功能模块(注：功能模块指的是能完成一定功能的程序集，在Backbone框架中，一个功能模块拥有一个SPA页)也需要满足一定要求：</span><span>①每一个功能模块最多只能有一个main.js(程序入口)、一个requireConfig.js(RequireJS的配置文件，可选)、一个config.js(功能模块的配置信息，参考数据模块规范)文件。</span><span>②以上三个文件名称不能随意更改。</span><span>③在main.js中，一般先调用全域RequireJS配置文件。如：</span>
+				  			<div class="highlight"><pre><code data-lang="html"><span>require(["<UI项目根目录>/requireConfig"], function() { //全域RequireJS配置注入</span><span >    require(["&lt;本模块目录&gt; / requireConfig"], function() { </span><span>    //本模块RequireJS配置注入，如果本模块没有requireConfig这一步可省略</span><span>    },</span><span >        require(["jquery", "models/admin"], function($, AdminModel) {</span><span>             ......</span><span>        });</span><span>    });</span><span>});</span></code></pre></div>
+				  		</li>
+				  	</ul>
+				  	<h2 id="code-appointment2">Backbone使用约定</h2>
+				  	<ul>
+				  		<li>
+				  			<span>视图是数据无关的</span><span>数据属于模型或集合，不能在视图或者DOM中存储数据，须做到数据层和视图层的关注点分离。</span>
+				  		</li>
+				  		<li>
+				  			<span>DOM事件只改变model</span><span>当一个DOM事件触发时，不要让它改变view本身，而是去改变这个model。</span>
+				  		</li>
+				  		<li>
+				  			<span>DOM只有在model发生改变时才改变</span><span>只有当model发生改变时，才能相应地改变其对应的DOM(或view)。</span>
+				  		</li>
+				  		<li>
+				  			<span>绑定的东西必须解绑</span><span>当视图从DOM上移除时，使用”remove”方法，视图必须从所绑定的事件上解绑。</span>
+				  		</li>
+				  		<li>
+				  			<span>视图的作用域</span><span>视图不要操作除它本身以外的DOM。当你需要操作另一个视图时，可以触发一个事件，让其自身去完成。</span>
+				  		</li>
+				  		<li>
+				  			<span>组件封装</span><span>组件封装时，用暴露view的方式提供接口给用户。如果model为某一view私有，就无需单独写一个model的JS文件，而是把model与view定义在一个命名空间下，封装起来。</span>
+				  		</li>
+				  		<li>
+				  			<span>Backbone中路由(router)的处理</span><span>在程序中需要根据需求，合理设置Backbone路由，满足客户要求。本文档规定，使用Hash规则设定路由。</span>
+				  		</li>				  						  		
+				  	</ul>
+				  	<h2 id="code-iframe">其他JS框架的使用</h2>
+				  	<ul>
+				  		<li>
+				  			<span>若项目需要再引入其他JS第三方库，须与团队其他成员协商，且经领导同意，才能使用。用以上JS库为基础开发出来的JS插件除外，可以直接使用。</span>
+				  		</li>
+				  		<li>
+				  			<span>BootStrap建议用require-CSS的方式将模块与它依赖的CSS文件进行耦合。</span>
+				  		</li>
+				  		<li>
+				  			<span>所有JS第三方库版本均用bower.js统一进行管理。全公司统一用相同版本进行开发。如有特别需求，同样需协商且经领导同意解决。</span>
+				  		</li>
+				  		<li>
+				  			<span>模板引擎推荐使用handlebars（编译或非编译模式均可），简单模板用underscore.js内置的模板工具即可。</span>
+				  		</li>
+				  		<li>
+				  			<span>若项目需要再引入其他JS第三方库，须与团队其他成员协商，且经领导同意，才能使用。用以上JS库为基础开发出来的JS插件除外，可以直接使用。</span>
+				  		</li>
+				  		<li>
+				  			<span>BootStrap建议用require-CSS的方式将模块与它依赖的CSS文件进行耦合。</span>
+				  		</li>
+				  		<li>
+				  			<span>所有JS第三方库版本均用bower.js统一进行管理。全公司统一用相同版本进行开发。如有特别需求，同样需协商且经领导同意解决。</span>
+				  		</li>
+				  		<li>
+				  			<span>模板引擎推荐使用handlebars（编译或非编译模式均可），简单模板用underscore.js内置的模板工具即可。</span>
+				  		</li>			  						  		
+				  	</ul>
+				</div>
+			</div>
+			<!--右侧内容结束-->
+		</div>
+	</div>
+	<!--主体内容结束-->
+	<!--网站底部开始-->
+	<div class="oso-docs-footer text-center">Copyright © 2006-2015 OSO</div>
+	<!--网站底部结束-->
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="lib/bootstrap/js/jquery-1.11.3.min.js"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/docs.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+body{font-family:"Helvetica Neue",Helvetica,Microsoft Yahei,Arial,sans-serif}
+*{margin:0;}
+/*网站头部*/
+.oso-docs-nav{margin-bottom:0;border-bottom:0;background-color:#fff}
+.oso-docs-nav .navbar-brand,.oso-docs-nav .navbar-nav>li>a{color:#563d7c;font-weight:500}
+.oso-docs-nav .navbar-nav>.active>a,.oso-docs-nav .navbar-nav>.active>a:hover,.oso-docs-nav .navbar-nav>li>a:hover{background-color:#f9f9f9;color:#463265}
+.oso-docs-nav .navbar-toggle .icon-bar{background-color:#563d7c}
+.oso-docs-nav .navbar-header .navbar-toggle{border-color:#fff}
+.oso-docs-nav .navbar-header .navbar-toggle:focus,.oso-docs-nav .navbar-header .navbar-toggle:hover{border-color:#f9f9f9;background-color:#f9f9f9}
+
+
+/*banner*/
+.oso-docs-header{margin-bottom:20px;padding:80px;background:-webkit-linear-gradient(#563d7c,#6f5499);background:-o-linear-gradient(#563d7c,#6f5499);background:-moz-linear-gradient(#563d7c,#6f5499);background:linear-gradient(#563d7c,#6f5499);color:#fff}
+.oso-docs-header h1{font-size:50px}
+
+
+/*左侧导航*/
+.oso-docs-list{padding:0}
+@media (min-width:768px){.oso-docs-sidebar{padding-left:20px}}
+.oso-docs-sidenav{margin-top:20px;margin-bottom:20px}
+.oso-docs-sidebar .nav>li>a{display:block;padding:4px 20px;color:#767676;font-weight:500;font-size:13px}
+.oso-docs-sidebar .nav>li>a:focus,.oso-docs-sidebar .nav>li>a:hover{padding-left:19px;border-left:1px solid #563d7c;background-color:transparent;color:#563d7c;text-decoration:none}
+.oso-docs-sidebar .nav>.active:focus>a,.oso-docs-sidebar .nav>.active:hover>a,.oso-docs-sidebar .nav>.active>a{padding-left:18px;border-left:2px solid #563d7c;background-color:transparent;color:#563d7c;font-weight:700}
+.oso-docs-sidebar .nav .nav{display:none;padding-bottom:10px}
+.oso-docs-sidebar .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-weight:400;font-size:12px}
+.oso-docs-sidebar .nav .nav>li>a:focus,.oso-docs-sidebar .nav .nav>li>a:hover{padding-left:29px}
+.oso-docs-sidebar .nav .nav>.active:focus>a,.oso-docs-sidebar .nav .nav>.active:hover>a,.oso-docs-sidebar .nav .nav>.active>a{padding-left:28px;font-weight:500}
+.back-to-top{display:none;margin-top:10px;margin-left:10px;padding:4px 10px;color:#999;font-weight:500;font-size:12px}
+.back-to-top:hover{color:#563d7c;text-decoration:none}
+@media (min-width:768px){.back-to-top{display:block}
+}
+@media (min-width:992px){.oso-docs-sidebar .nav>.active>ul{display:block}
+.oso-docs-sidebar.affix {position:static
+}
+.oso-docs-sidebar.affix{width:213px}
+.oso-docs-sidebar.affix{position:fixed;top:20px}
+.oso-docs-sidebar.affix .oso-docs-sidenav{margin-top:0;margin-bottom:0}
+}
+@media (min-width:1200px){.oso-docs-sidebar.affix{width:263px}
+}
+
+
+/*右侧内容*/
+.oso-docs-section{margin-bottom:60px}
+.oso-docs-section:last-child{margin-bottom:0}
+.oso-docs-section ul span{display: block}
+h1[id]{margin-top:0;padding-top:20px}
+.highlight{margin-bottom:20px;padding:9px 14px;border:1px solid #e1e1e8;border-radius:4px;background-color:#f7f7f9;}
+.highlight pre{margin-top:0;margin-bottom:0;padding:0;border:0;background-color:transparent;white-space:nowrap;word-break:normal;color:#4f9fcf;}
+.highlight pre code:first-child{display:inline-block;padding-right:45px}
+.oso-distance{margin-bottom: 20px;}
+
+
+/*网站底部*/
+.oso-docs-footer{margin-top:30px;height:60px;border-top:1px solid #eee;line-height:60px}
