@@ -312,7 +312,17 @@
   						</li>
   						<li><span>使用”===”代替”==”：</span><span>JavaScript 使用2种不同的等值运算符：===|!== 和 ==|!=，后者附带强制类型转换，为了避免出现比较时的错误，统一使用前者作为JS代码中的等值运算符。</span></li>
   						<li><span>使用 join() 来拼接字符串：</span><span class="oso-distance">字符串的拼接在开发中会经常遇到，用“+=”的方式来拼接字符串的效率非常的低。因此在大量拼接时，规定统一使用数组的“.join()”方法来拼接字符串。如：</span>
-  							<div class="highlight"><pre><code class="language-html" data-lang="html"><span >var array = [];</span><span >for(var i = 0; i &lt; 10000; i++){</span><span >   array[i] = "&lt;input type='button' value='a'&gt;";</span><span >}</span><span >document.getElementById("one").innerHTML = array.join("");</span></code></pre></div>
+  							<div class="highlight">
+  								<pre>
+  									<code class="language-html" data-lang="html">
+  									<span >var array = [];</span>
+  									<span >for(var i = 0; i &lt; 10000; i++){</span>
+  									<span >   array[i] = "&lt;input type='button' value='a'&gt;";</span>
+  									<span >}</span>
+  									<span >document.getElementById("one").innerHTML = array.join("");</span>
+  									</code>
+  								</pre>
+  							</div>
   						</li>
   						<li><span>使用{}代替 new Ojbect()，使用[]代替 new Array()</span><span>对象和数组分别有上述两种创建方式，本文档规定统一使用{}和[]来创建对象或数组。</span></li>
   						<li><span>尽量避免全局变量</span><span class="oso-distance">将多个全局变量定义在一个命名空间下时，将增大变量污染的可能性。</span>

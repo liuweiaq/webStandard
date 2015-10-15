@@ -17,7 +17,7 @@
 	<header class="navbar navbar-static-top oso-docs-nav" id="top" role="banner">
 	  <div class="container">
 	    <div class="navbar-header">
-	      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#oso-navbar" aria-controls="oso-navbar" aria-expanded="false">
+	    	<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#oso-navbar" aria-controls="oso-navbar" aria-expanded="false">
 	        <span class="sr-only">Toggle navigation</span>
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
@@ -41,14 +41,16 @@
 	  </div>
 	</header>
 	<!--网站头部结束-->
+
 	<!--banner开始-->
 	<div class="oso-docs-header">
 		<div class="container">
-			<h1>编码规范</h1>
-			<p>编写灵活、稳定、高质量的 HTML 、CSS 和 JavaScript 代码的规范。</p>
+			<h1>CSS编码规范</h1>
+			<p>编写灵活、稳定、高质量的CSS代码的规范。</p>
 		</div>
 	</div>
 	<!--banner结束-->
+
 	<!--主体内容开始-->
 	<div class="container">
 		<div class="row">
@@ -57,102 +59,21 @@
 			    <nav class="oso-docs-sidebar hidden-print hidden-xs hidden-sm">
 			        <ul class="nav oso-docs-sidenav">			              
 			            <li>
-						  <a href="#overview">概览</a>
+						  <a href="#overview">总体要求</a>
+						</li>
+						<li>
+						  <a href="#grid">CSS命名规范</a>
 						  <ul class="nav">
-						    <li><a href="#overview-doctype">HTML5 文档类型</a></li>
-						    <li><a href="#overview-mobile">移动设备优先</a></li>
-						    <li><a href="#overview-type-links">排版与链接</a></li>
-						    <li><a href="#overview-normalize">Normalize.css</a></li>
-						    <li><a href="#overview-container">布局容器</a></li>
+						    <li><a href="#grid-intro">文件命名规范</a></li>
+						    <li><a href="#grid-media-queries">类(class)命名规范</a></li>
 						  </ul>
 						</li>
 						<li>
-						  <a href="#grid">栅格系统</a>
+						  <a href="#type">CSS代码书写规范</a>
 						  <ul class="nav">
-						    <li><a href="#grid-intro">简介</a></li>
-						    <li><a href="#grid-media-queries">媒体查询</a></li>
-						    <li><a href="#grid-options">栅格参数</a></li>
-						  </ul>
-						</li>
-						<li>
-						  <a href="#type">排版</a>
-						  <ul class="nav">
-						    <li><a href="#type-headings">标题</a></li>
-						    <li><a href="#type-body-copy">页面主体</a></li>
-						    <li><a href="#type-inline-text">内联文本元素</a></li>
-						    <li><a href="#type-alignment">对齐</a></li>
-						    <li><a href="#type-transformation">改变大小写</a></li>
-						    <li><a href="#type-abbreviations">缩略语</a></li>
-						    <li><a href="#type-addresses">地址</a></li>
-						    <li><a href="#type-blockquotes">引用</a></li>
-						    <li><a href="#type-lists">列表</a></li>
-						  </ul>
-						</li>
-						<li>
-						  <a href="#code">代码</a>
-						  <ul class="nav">
-						    <li><a href="#code-inline">内联代码</a></li>
-						    <li><a href="#code-user-input">用户输入</a></li>
-						    <li><a href="#code-block">基本代码块</a></li>
-						  </ul>
-						</li>
-						<li>
-						  <a href="#tables">表格</a>
-						  <ul class="nav">
-						    <li><a href="#tables-example">基本实例</a></li>
-						    <li><a href="#tables-striped">条纹状表格</a></li>
-						  </ul>
-						</li>
-						<li>
-						  <a href="#forms">表单</a>
-						  <ul class="nav">
-						    <li><a href="#forms-example">基本实例</a></li>
-						    <li><a href="#forms-inline">内联表单</a></li>
-						  </ul>
-						</li>
-						<li>
-						  <a href="#buttons">按钮</a>
-						  <ul class="nav">
-						    <li><a href="#buttons-tags">可作为按钮使用的标签或元素</a></li>
-						    <li><a href="#buttons-options">预定义样式</a></li>
-						  </ul>
-						</li>
-						<li>
-						  <a href="#images">图片</a>
-						  <ul class="nav">
-						    <li><a href="#images-responsive">响应式图片</a></li>
-						    <li><a href="#images-shapes">图片形状</a></li>
-						  </ul>
-						</li>
-						<li>
-						  <a href="#helper-classes">辅助类</a>
-						  <ul class="nav">
-						    <li><a href="#helper-classes-colors">情境文本颜色</a></li>
-						    <li><a href="#helper-classes-backgrounds">情境背景色</a></li>
-						  </ul>
-						</li>
-						<li>
-						  <a href="#responsive-utilities">响应式工具</a>
-						  <ul class="nav">
-						    <li><a href="#responsive-utilities-classes">可用的类</a></li>
-						    <li><a href="#responsive-utilities-print">打印类</a></li>
-						    <li><a href="#responsive-utilities-tests">测试用例</a></li>
-						  </ul>
-						</li>
-						<li>
-						  <a href="#less">使用 Less</a>
-						  <ul class="nav">
-						    <li><a href="#less-bootstrap">编译 Bootstrap</a></li>
-						    <li><a href="#less-variables">变量</a></li>
-						    <li><a href="#less-mixins-vendor">针对特定厂商的 mixin</a></li>
-						    <li><a href="#less-mixins-utility">工具 mixin</a></li>
-						  </ul>
-						</li>
-						<li>
-						  <a href="#sass">使用 Sass</a>
-						  <ul class="nav">
-						    <li><a href="#sass-contents">包含的内容</a></li>
-						    <li><a href="#sass-installation">安装</a></li>
+						    <li><a href="#type-headings">基本书写规范</a></li>
+						    <li><a href="#type-body-copy">代码注释</a></li>
+						    <li><a href="#type-inline-text">属性缩写</a></li>
 						  </ul>
 						</li>			              
 			        </ul>	
@@ -160,294 +81,468 @@
 			    </nav>
 			</div>
 			<!--左侧导航结束-->
+
 			<!--右侧内容开始-->
 			<div class="col-md-9 oso-docs-list">
 				<div class="oso-docs-section">
-  					<h1 id="overview" class="page-header">概览</h1>
-  					<p class="lead">深入了解 Bootstrap 底层结构的关键部分，包括我们让 web 开发变得更好、更快、更强壮的最佳实践。</p>
-  					<h2 id="overview-doctype">HTML5 文档类型</h2>
-  					<p>Bootstrap 使用到的某些 HTML 元素和 CSS 属性需要将页面设置为 HTML5 文档类型。在你项目中的每个页面都要参照下面的格式进行设置。</p>
-  					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"zh-CN"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/html&gt;</span></code></pre></div>
-  					<h2 id="overview-mobile">移动设备优先</h2>
-  					<p>在 Bootstrap 2 中，我们对框架中的某些关键部分增加了对移动设备友好的样式。而在 Bootstrap 3 中，我们重写了整个框架，使其一开始就是对移动设备友好的。这次不是简单的增加一些可选的针对移动设备的样式，而是直接融合进了框架的内核中。也就是说，<strong>Bootstrap 是移动设备优先的</strong>。针对移动设备的样式融合进了框架的每个角落，而不是增加一个额外的文件。</p>
-  					<p>为了确保适当的绘制和触屏缩放，需要在 <code>&lt;head&gt;</code> 之中<strong>添加 viewport 元数据标签</strong>。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span></code></pre></div>
-  					<p>在移动设备浏览器上，通过为视口（viewport）设置 meta 属性为 <code>user-scalable=no</code> 可以禁用其缩放（zooming）功能。这样禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉。注意，这种方式我们并不推荐所有网站使用，还是要看你自己的情况而定！</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span><span class="nt">&gt;</span></code></pre></div>
-  					<h2 id="overview-type-links">排版与链接</h2>
-  					<p>Bootstrap 排版、链接样式设置了基本的全局样式。分别是：</p>
-				  	<ul>
-					    <li>为 <code>body</code> 元素设置 <code>background-color: #fff;</code></li>
-					    <li>使用 <code>@font-family-base</code>、<code>@font-size-base</code> 和 <code>@line-height-base</code> a变量作为排版的基本参数</li>
-					    <li>为所有链接设置了基本颜色 <code>@link-color</code> ，并且当链接处于 <code>:hover</code> 状态时才添加下划线</li>
-				  	</ul>
-				  	<p>这些样式都能在 <code>scaffolding.less</code> 文件中找到对应的源码。</p>
-				  	<h2 id="overview-normalize">Normalize.css</h2>
-				  	<p>为了增强跨浏览器表现的一致性，我们使用了 <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>，这是由 <a href="https://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> 和 <a href="https://twitter.com/jon_neal" target="_blank">Jonathan Neal</a> 维护的一个CSS 重置样式库。</p>
-				  	<h2 id="overview-container">布局容器</h2>
-				  	<p>Bootstrap 需要为页面内容和栅格系统包裹一个 <code>.container</code> 容器。我们提供了两个作此用处的类。注意，由于 <code>padding</code> 等属性的原因，这两种 容器类不能互相嵌套。</p>
-				  	<p><code>.container</code> 类用于固定宽度并支持响应式布局的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre></div>
-				  	<p><code>.container-fluid</code> 类用于 100% 宽度，占据全部视口（viewport）的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre></div>
+  					<h1 id="overview" class="page-header">总体要求</h1>
+  					<li>所有文件统一采用UTF-8无BOM编码；</li>
+  					<li>所有单词一律小写；</li>
+       				<li>结构与样式分离：在HTML页面里只写入文档的结构，样式均须写在CSS文件中；</li>
+					<li>框架引入：只能引入Bootstrap作为前端CSS框架，辅助开发。如有特别需求，须与团队其他成员讨论决定；</li>
+					<li>CSS选择器一般使用class选择器和标签选择器，不推荐使用id选择器。</li>
 				</div>
 				<div class="oso-docs-section">
-  					<h1 id="grid" class="page-header">栅格系统</h1>
-  					<p class="lead">深入了解 Bootstrap 底层结构的关键部分，包括我们让 web 开发变得更好、更快、更强壮的最佳实践。</p>
-  					<h2 id="grid-intro">简介</h2>
-  					<p>Bootstrap 使用到的某些 HTML 元素和 CSS 属性需要将页面设置为 HTML5 文档类型。在你项目中的每个页面都要参照下面的格式进行设置。</p>
-  					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"zh-CN"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/html&gt;</span></code></pre></div>
-  					<h2 id="grid-media-queries">媒体查询</h2>
-  					<p>在 Bootstrap 2 中，我们对框架中的某些关键部分增加了对移动设备友好的样式。而在 Bootstrap 3 中，我们重写了整个框架，使其一开始就是对移动设备友好的。这次不是简单的增加一些可选的针对移动设备的样式，而是直接融合进了框架的内核中。也就是说，<strong>Bootstrap 是移动设备优先的</strong>。针对移动设备的样式融合进了框架的每个角落，而不是增加一个额外的文件。</p>
-  					<p>为了确保适当的绘制和触屏缩放，需要在 <code>&lt;head&gt;</code> 之中<strong>添加 viewport 元数据标签</strong>。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span></code></pre></div>
-  					<p>在移动设备浏览器上，通过为视口（viewport）设置 meta 属性为 <code>user-scalable=no</code> 可以禁用其缩放（zooming）功能。这样禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉。注意，这种方式我们并不推荐所有网站使用，还是要看你自己的情况而定！</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span><span class="nt">&gt;</span></code></pre></div>
-  					<h2 id="grid-options">栅格参数</h2>
-  					<p>Bootstrap 排版、链接样式设置了基本的全局样式。分别是：</p>
-				  	<ul>
-					    <li>为 <code>body</code> 元素设置 <code>background-color: #fff;</code></li>
-					    <li>使用 <code>@font-family-base</code>、<code>@font-size-base</code> 和 <code>@line-height-base</code> a变量作为排版的基本参数</li>
-					    <li>为所有链接设置了基本颜色 <code>@link-color</code> ，并且当链接处于 <code>:hover</code> 状态时才添加下划线</li>
-				  	</ul>
-				  	<p>这些样式都能在 <code>scaffolding.less</code> 文件中找到对应的源码。</p>
-				  	<h2 id="overview-normalize">Normalize.css</h2>
-				  	<p>为了增强跨浏览器表现的一致性，我们使用了 <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>，这是由 <a href="https://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> 和 <a href="https://twitter.com/jon_neal" target="_blank">Jonathan Neal</a> 维护的一个CSS 重置样式库。</p>
-				  	<h2 id="overview-container">栅格参数</h2>
-				  	<p>Bootstrap 需要为页面内容和栅格系统包裹一个 <code>.container</code> 容器。我们提供了两个作此用处的类。注意，由于 <code>padding</code> 等属性的原因，这两种 容器类不能互相嵌套。</p>
-				  	<p><code>.container</code> 类用于固定宽度并支持响应式布局的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre></div>
-				  	<p><code>.container-fluid</code> 类用于 100% 宽度，占据全部视口（viewport）的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre>
-					</div>
-					<p>Bootstrap 需要为页面内容和栅格系统包裹一个 <code>.container</code> 容器。我们提供了两个作此用处的类。注意，由于 <code>padding</code> 等属性的原因，这两种 容器类不能互相嵌套。</p>
-				  	<p><code>.container</code> 类用于固定宽度并支持响应式布局的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre></div>
-				  	<p><code>.container-fluid</code> 类用于 100% 宽度，占据全部视口（viewport）的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre>
-					</div>
-				</div>
-				<div class="oso-docs-section">
-  					<h1 id="type" class="page-header">栅格系统</h1>
-  					<p class="lead">深入了解 Bootstrap 底层结构的关键部分，包括我们让 web 开发变得更好、更快、更强壮的最佳实践。</p>
-  					<h2 id="type-headings">简介</h2>
-  					<p>Bootstrap 使用到的某些 HTML 元素和 CSS 属性需要将页面设置为 HTML5 文档类型。在你项目中的每个页面都要参照下面的格式进行设置。</p>
-  					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"zh-CN"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/html&gt;</span></code></pre></div>
-  					<h2 id="type-body-copy">媒体查询</h2>
-  					<p>在 Bootstrap 2 中，我们对框架中的某些关键部分增加了对移动设备友好的样式。而在 Bootstrap 3 中，我们重写了整个框架，使其一开始就是对移动设备友好的。这次不是简单的增加一些可选的针对移动设备的样式，而是直接融合进了框架的内核中。也就是说，<strong>Bootstrap 是移动设备优先的</strong>。针对移动设备的样式融合进了框架的每个角落，而不是增加一个额外的文件。</p>
-  					<p>为了确保适当的绘制和触屏缩放，需要在 <code>&lt;head&gt;</code> 之中<strong>添加 viewport 元数据标签</strong>。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span></code></pre></div>
-  					<p>在移动设备浏览器上，通过为视口（viewport）设置 meta 属性为 <code>user-scalable=no</code> 可以禁用其缩放（zooming）功能。这样禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉。注意，这种方式我们并不推荐所有网站使用，还是要看你自己的情况而定！</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span><span class="nt">&gt;</span></code></pre></div>
-  					<h2 id="type-inline-text">栅格参数</h2>
-  					<p>Bootstrap 排版、链接样式设置了基本的全局样式。分别是：</p>
-				  	<ul>
-					    <li>为 <code>body</code> 元素设置 <code>background-color: #fff;</code></li>
-					    <li>使用 <code>@font-family-base</code>、<code>@font-size-base</code> 和 <code>@line-height-base</code> a变量作为排版的基本参数</li>
-					    <li>为所有链接设置了基本颜色 <code>@link-color</code> ，并且当链接处于 <code>:hover</code> 状态时才添加下划线</li>
-				  	</ul>
-				  	<p>这些样式都能在 <code>scaffolding.less</code> 文件中找到对应的源码。</p>
-				  	<h2 id="type-alignment">对齐</h2>
-				  	<p>为了增强跨浏览器表现的一致性，我们使用了 <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>，这是由 <a href="https://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> 和 <a href="https://twitter.com/jon_neal" target="_blank">Jonathan Neal</a> 维护的一个CSS 重置样式库。</p>
-				  	<p>Bootstrap 需要为页面内容和栅格系统包裹一个 <code>.container</code> 容器。我们提供了两个作此用处的类。注意，由于 <code>padding</code> 等属性的原因，这两种 容器类不能互相嵌套。</p>
-				  	<p><code>.container</code> 类用于固定宽度并支持响应式布局的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre></div>
-				  	<p><code>.container-fluid</code> 类用于 100% 宽度，占据全部视口（viewport）的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre>
-					</div>
-					<p>Bootstrap 需要为页面内容和栅格系统包裹一个 <code>.container</code> 容器。我们提供了两个作此用处的类。注意，由于 <code>padding</code> 等属性的原因，这两种 容器类不能互相嵌套。</p>
-				  	<p><code>.container</code> 类用于固定宽度并支持响应式布局的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre></div>
-				  	<p><code>.container-fluid</code> 类用于 100% 宽度，占据全部视口（viewport）的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre>
-					</div>
-				  	<h2 id="type-transformation">改变大小写</h2>
-				  	<p>Bootstrap 需要为页面内容和栅格系统包裹一个 <code>.container</code> 容器。我们提供了两个作此用处的类。注意，由于 <code>padding</code> 等属性的原因，这两种 容器类不能互相嵌套。</p>
-				  	<p><code>.container</code> 类用于固定宽度并支持响应式布局的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre></div>
-				  	<p><code>.container-fluid</code> 类用于 100% 宽度，占据全部视口（viewport）的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre>
-					</div>
-					<p>Bootstrap 需要为页面内容和栅格系统包裹一个 <code>.container</code> 容器。我们提供了两个作此用处的类。注意，由于 <code>padding</code> 等属性的原因，这两种 容器类不能互相嵌套。</p>
-				  	<p><code>.container</code> 类用于固定宽度并支持响应式布局的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre></div>
-				  	<p><code>.container-fluid</code> 类用于 100% 宽度，占据全部视口（viewport）的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre>
-					</div>
-					<h2 id="type-abbreviations">缩略语</h2>
-				  	<p>Bootstrap 需要为页面内容和栅格系统包裹一个 <code>.container</code> 容器。我们提供了两个作此用处的类。注意，由于 <code>padding</code> 等属性的原因，这两种 容器类不能互相嵌套。</p>
-				  	<p><code>.container</code> 类用于固定宽度并支持响应式布局的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre></div>
-				  	<p><code>.container-fluid</code> 类用于 100% 宽度，占据全部视口（viewport）的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre>
-					</div>
-					<h2 id="type-addresses">地址</h2>
-				  	<p>Bootstrap 需要为页面内容和栅格系统包裹一个 <code>.container</code> 容器。我们提供了两个作此用处的类。注意，由于 <code>padding</code> 等属性的原因，这两种 容器类不能互相嵌套。</p>
-				  	<p><code>.container</code> 类用于固定宽度并支持响应式布局的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre></div>
-				  	<p><code>.container-fluid</code> 类用于 100% 宽度，占据全部视口（viewport）的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre>
-					</div>
-					<h2 id="type-blockquotes">引用</h2>
-				  	<p>Bootstrap 需要为页面内容和栅格系统包裹一个 <code>.container</code> 容器。我们提供了两个作此用处的类。注意，由于 <code>padding</code> 等属性的原因，这两种 容器类不能互相嵌套。</p>
-				  	<p><code>.container</code> 类用于固定宽度并支持响应式布局的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre></div>
-				  	<p><code>.container-fluid</code> 类用于 100% 宽度，占据全部视口（viewport）的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre>
-					</div>
+  					<h1 id="grid" class="page-header">CSS命名规范</h1>
 
-					<h2 id="type-lists">列表</h2>
-				  	<p>Bootstrap 需要为页面内容和栅格系统包裹一个 <code>.container</code> 容器。我们提供了两个作此用处的类。注意，由于 <code>padding</code> 等属性的原因，这两种 容器类不能互相嵌套。</p>
-				  	<p><code>.container</code> 类用于固定宽度并支持响应式布局的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre></div>
-				  	<p><code>.container-fluid</code> 类用于 100% 宽度，占据全部视口（viewport）的容器。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
-				  	...
-					<span class="nt">&lt;/div&gt;</span></code></pre>
-					</div>
+  					<h2 id="grid-intro">文件命名规范</h2>
+  					<li>CSS文件名及作用：master.css(主样式)、layout.css(框架布局样式)、font.css(字体相关样式)、print.css(打印相关样式)；</li>
+					<li>CSS规则根据其作用，分别存储于以上CSS文件中；</li>
+					<li>不能随意更改以上文件名称；</li>
+					<li>一般不再新增CSS文件，如有特别需求，须与团队其他成员讨论决定。</li>
+
+  					<h2 id="grid-media-queries">类(class)命名规范</h2>
+  					<li>所有类名均须加前缀oso，如：oso-header；</li>
+					<li>类名单词之间用中横线(-)连接，如：oso-main-nav；</li>
+					<li>用于命名的英语单词应能准确概括该规则的内容或功能，不能使用样式信息、汉语拼音、不常见词汇等进行命名。下表列出了一些常用单词可供参考：</li>
+					<table class="table table-bordered">
+						<tbody>
+							<tr>
+								<td class="success">布局类</td>
+							</tr>
+							<tr>
+								<td class="active">
+									header(页头)、footer(页脚)、main(页面主体)<br>
+									top(顶部)、bottom(底部)、center(中间)、left(左侧)、right(右侧)<br>
+									inner(内部)、outer(外部) 、wrapper(外套样式)<br>
+									sidebar(侧栏)、content(内容)<br>
+									column(列)、row(行)<br>
+								</td>
+							</tr>
+							<tr>
+								<td class="success">导航类</td>
+							</tr>
+							<tr>
+								<td class="active">
+									nav(导航)、menu(菜单)、title(标题)、summary(摘要)
+								</td>
+							</tr>
+							<tr>
+								<td class="success">功能类</td>
+							</tr>
+							<tr>
+								<td class="active">
+									tab(标签)、icon(图标)、scroll(滚动)、sub(子)、logo(标志)、link(链接)、banner(广告条)、status(状态)、toolbar(工具条)、register(注册)、guild(指南)、news(新闻)
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>示例：</p>	
+  					<table class="table table-bordered">
+  						<thead>
+  							<tr>
+  								<td class="success" width="50%">Bad Code</td>
+  								<td class="success">Good Code</td>
+  							</tr>
+  						</thead>
+  						<tbody>
+  							<tr>
+  								<td class="active">
+  									<code>
+  										.oso-left   /*使用了样式信息*/<br>
+										.oso-waitao  /*使用了汉语拼音*/
+									</code>
+  								</td>
+								<td class="active">
+									<code>
+  										.oso-sidebar<br>
+										.oso-wrapper
+									</code>
+								</td>
+  							</tr>
+  						</tbody>
+  					</table>
 				</div>
 				<div class="oso-docs-section">
-  					<h1 id="code" class="page-header">代码</h1>
-  					<p class="lead">深入了解 Bootstrap 底层结构的关键部分，包括我们让 web 开发变得更好、更快、更强壮的最佳实践。</p>
-  					<h2 id="code-inline">内联代码</h2>
-  					<p>Bootstrap 使用到的某些 HTML 元素和 CSS 属性需要将页面设置为 HTML5 文档类型。在你项目中的每个页面都要参照下面的格式进行设置。</p>
-  					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"zh-CN"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/html&gt;</span></code></pre></div>
-  					<h2 id="code-user-input">用户输入</h2>
-  					<p>在 Bootstrap 2 中，我们对框架中的某些关键部分增加了对移动设备友好的样式。而在 Bootstrap 3 中，我们重写了整个框架，使其一开始就是对移动设备友好的。这次不是简单的增加一些可选的针对移动设备的样式，而是直接融合进了框架的内核中。也就是说，<strong>Bootstrap 是移动设备优先的</strong>。针对移动设备的样式融合进了框架的每个角落，而不是增加一个额外的文件。</p>
-  					<p>为了确保适当的绘制和触屏缩放，需要在 <code>&lt;head&gt;</code> 之中<strong>添加 viewport 元数据标签</strong>。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span></code></pre></div>
-  					<p>在移动设备浏览器上，通过为视口（viewport）设置 meta 属性为 <code>user-scalable=no</code> 可以禁用其缩放（zooming）功能。这样禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉。注意，这种方式我们并不推荐所有网站使用，还是要看你自己的情况而定！</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span><span class="nt">&gt;</span></code></pre></div>
-  					<h2 id="code-block">基本代码块</h2>
-  					<p>Bootstrap 排版、链接样式设置了基本的全局样式。分别是：</p>
-				  	<ul>
-					    <li>为 <code>body</code> 元素设置 <code>background-color: #fff;</code></li>
-					    <li>使用 <code>@font-family-base</code>、<code>@font-size-base</code> 和 <code>@line-height-base</code> a变量作为排版的基本参数</li>
-					    <li>为所有链接设置了基本颜色 <code>@link-color</code> ，并且当链接处于 <code>:hover</code> 状态时才添加下划线</li>
-				  	</ul>
-				  	<p>这些样式都能在 <code>scaffolding.less</code> 文件中找到对应的源码。</p>
-				</div>
-				<div class="oso-docs-section">
-  					<h1 id="tables" class="page-header">表格</h1>
-  					<p class="lead">深入了解 Bootstrap 底层结构的关键部分，包括我们让 web 开发变得更好、更快、更强壮的最佳实践。</p>
-  					<h2 id="tables-example">基本实例</h2>
-  					<p>Bootstrap 使用到的某些 HTML 元素和 CSS 属性需要将页面设置为 HTML5 文档类型。在你项目中的每个页面都要参照下面的格式进行设置。</p>
-  					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"zh-CN"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/html&gt;</span></code></pre></div>
-  					<h2 id="tables-striped">条纹状表格</h2>
-  					<p>在 Bootstrap 2 中，我们对框架中的某些关键部分增加了对移动设备友好的样式。而在 Bootstrap 3 中，我们重写了整个框架，使其一开始就是对移动设备友好的。这次不是简单的增加一些可选的针对移动设备的样式，而是直接融合进了框架的内核中。也就是说，<strong>Bootstrap 是移动设备优先的</strong>。针对移动设备的样式融合进了框架的每个角落，而不是增加一个额外的文件。</p>
-  					<p>为了确保适当的绘制和触屏缩放，需要在 <code>&lt;head&gt;</code> 之中<strong>添加 viewport 元数据标签</strong>。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span></code></pre></div>
-  					<p>在移动设备浏览器上，通过为视口（viewport）设置 meta 属性为 <code>user-scalable=no</code> 可以禁用其缩放（zooming）功能。这样禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉。注意，这种方式我们并不推荐所有网站使用，还是要看你自己的情况而定！</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span><span class="nt">&gt;</span></code></pre></div>
-				</div>
-				<div class="oso-docs-section">
-  					<h1 id="forms" class="page-header">表单</h1>
-  					<p class="lead">深入了解 Bootstrap 底层结构的关键部分，包括我们让 web 开发变得更好、更快、更强壮的最佳实践。</p>
-  					<h2 id="forms-example">基本实例</h2>
-  					<p>Bootstrap 使用到的某些 HTML 元素和 CSS 属性需要将页面设置为 HTML5 文档类型。在你项目中的每个页面都要参照下面的格式进行设置。</p>
-  					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"zh-CN"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/html&gt;</span></code></pre></div>
-  					<h2 id="forms-inline">条纹状表格</h2>
-  					<p>在 Bootstrap 2 中，我们对框架中的某些关键部分增加了对移动设备友好的样式。而在 Bootstrap 3 中，我们重写了整个框架，使其一开始就是对移动设备友好的。这次不是简单的增加一些可选的针对移动设备的样式，而是直接融合进了框架的内核中。也就是说，<strong>Bootstrap 是移动设备优先的</strong>。针对移动设备的样式融合进了框架的每个角落，而不是增加一个额外的文件。</p>
-  					<p>为了确保适当的绘制和触屏缩放，需要在 <code>&lt;head&gt;</code> 之中<strong>添加 viewport 元数据标签</strong>。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span></code></pre></div>
-  					<p>在移动设备浏览器上，通过为视口（viewport）设置 meta 属性为 <code>user-scalable=no</code> 可以禁用其缩放（zooming）功能。这样禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉。注意，这种方式我们并不推荐所有网站使用，还是要看你自己的情况而定！</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span><span class="nt">&gt;</span></code></pre></div>
-				</div>				
-				<div class="oso-docs-section">
-  					<h1 id="buttons" class="page-header">按钮</h1>
-  					<p class="lead">深入了解 Bootstrap 底层结构的关键部分，包括我们让 web 开发变得更好、更快、更强壮的最佳实践。</p>
-  					<h2 id="buttons-tags">可作为按钮使用的标签或元素</h2>
-  					<p>Bootstrap 使用到的某些 HTML 元素和 CSS 属性需要将页面设置为 HTML5 文档类型。在你项目中的每个页面都要参照下面的格式进行设置。</p>
-  					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"zh-CN"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/html&gt;</span></code></pre></div>
-  					<h2 id="buttons-options">条纹状表格</h2>
-  					<p>在 Bootstrap 2 中，我们对框架中的某些关键部分增加了对移动设备友好的样式。而在 Bootstrap 3 中，我们重写了整个框架，使其一开始就是对移动设备友好的。这次不是简单的增加一些可选的针对移动设备的样式，而是直接融合进了框架的内核中。也就是说，<strong>Bootstrap 是移动设备优先的</strong>。针对移动设备的样式融合进了框架的每个角落，而不是增加一个额外的文件。</p>
-  					<p>为了确保适当的绘制和触屏缩放，需要在 <code>&lt;head&gt;</code> 之中<strong>添加 viewport 元数据标签</strong>。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span></code></pre></div>
-  					<p>在移动设备浏览器上，通过为视口（viewport）设置 meta 属性为 <code>user-scalable=no</code> 可以禁用其缩放（zooming）功能。这样禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉。注意，这种方式我们并不推荐所有网站使用，还是要看你自己的情况而定！</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span><span class="nt">&gt;</span></code></pre></div>
-				</div>				
-				<div class="oso-docs-section">
-  					<h1 id="images" class="page-header">图片</h1>
-  					<p class="lead">深入了解 Bootstrap 底层结构的关键部分，包括我们让 web 开发变得更好、更快、更强壮的最佳实践。</p>
-  					<h2 id="images-responsive">可作为按钮使用的标签或元素</h2>
-  					<p>Bootstrap 使用到的某些 HTML 元素和 CSS 属性需要将页面设置为 HTML5 文档类型。在你项目中的每个页面都要参照下面的格式进行设置。</p>
-  					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"zh-CN"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/html&gt;</span></code></pre></div>
-  					<h2 id="images-shapes">条纹状表格</h2>
-  					<p>在 Bootstrap 2 中，我们对框架中的某些关键部分增加了对移动设备友好的样式。而在 Bootstrap 3 中，我们重写了整个框架，使其一开始就是对移动设备友好的。这次不是简单的增加一些可选的针对移动设备的样式，而是直接融合进了框架的内核中。也就是说，<strong>Bootstrap 是移动设备优先的</strong>。针对移动设备的样式融合进了框架的每个角落，而不是增加一个额外的文件。</p>
-  					<p>为了确保适当的绘制和触屏缩放，需要在 <code>&lt;head&gt;</code> 之中<strong>添加 viewport 元数据标签</strong>。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span></code></pre></div>
-  					<p>在移动设备浏览器上，通过为视口（viewport）设置 meta 属性为 <code>user-scalable=no</code> 可以禁用其缩放（zooming）功能。这样禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉。注意，这种方式我们并不推荐所有网站使用，还是要看你自己的情况而定！</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span><span class="nt">&gt;</span></code></pre></div>
-				</div>				
-				<div class="oso-docs-section">
-  					<h1 id="helper-classes" class="page-header">辅助类</h1>
-  					<p class="lead">深入了解 Bootstrap 底层结构的关键部分，包括我们让 web 开发变得更好、更快、更强壮的最佳实践。</p>
-  					<h2 id="helper-classes-colors">可作为按钮使用的标签或元素</h2>
-  					<p>Bootstrap 使用到的某些 HTML 元素和 CSS 属性需要将页面设置为 HTML5 文档类型。在你项目中的每个页面都要参照下面的格式进行设置。</p>
-  					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"zh-CN"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/html&gt;</span></code></pre></div>
-  					<h2 id="helper-classes-backgrounds">条纹状表格</h2>
-  					<p>在 Bootstrap 2 中，我们对框架中的某些关键部分增加了对移动设备友好的样式。而在 Bootstrap 3 中，我们重写了整个框架，使其一开始就是对移动设备友好的。这次不是简单的增加一些可选的针对移动设备的样式，而是直接融合进了框架的内核中。也就是说，<strong>Bootstrap 是移动设备优先的</strong>。针对移动设备的样式融合进了框架的每个角落，而不是增加一个额外的文件。</p>
-  					<p>为了确保适当的绘制和触屏缩放，需要在 <code>&lt;head&gt;</code> 之中<strong>添加 viewport 元数据标签</strong>。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span></code></pre></div>
-  					<p>在移动设备浏览器上，通过为视口（viewport）设置 meta 属性为 <code>user-scalable=no</code> 可以禁用其缩放（zooming）功能。这样禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉。注意，这种方式我们并不推荐所有网站使用，还是要看你自己的情况而定！</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span><span class="nt">&gt;</span></code></pre></div>
-  					<p>在 Bootstrap 2 中，我们对框架中的某些关键部分增加了对移动设备友好的样式。而在 Bootstrap 3 中，我们重写了整个框架，使其一开始就是对移动设备友好的。这次不是简单的增加一些可选的针对移动设备的样式，而是直接融合进了框架的内核中。也就是说，<strong>Bootstrap 是移动设备优先的</strong>。针对移动设备的样式融合进了框架的每个角落，而不是增加一个额外的文件。</p>
-  					<p>为了确保适当的绘制和触屏缩放，需要在 <code>&lt;head&gt;</code> 之中<strong>添加 viewport 元数据标签</strong>。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span></code></pre></div>
-  					<p>在移动设备浏览器上，通过为视口（viewport）设置 meta 属性为 <code>user-scalable=no</code> 可以禁用其缩放（zooming）功能。这样禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉。注意，这种方式我们并不推荐所有网站使用，还是要看你自己的情况而定！</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span><span class="nt">&gt;</span></code></pre></div>
-  					<p>在 Bootstrap 2 中，我们对框架中的某些关键部分增加了对移动设备友好的样式。而在 Bootstrap 3 中，我们重写了整个框架，使其一开始就是对移动设备友好的。这次不是简单的增加一些可选的针对移动设备的样式，而是直接融合进了框架的内核中。也就是说，<strong>Bootstrap 是移动设备优先的</strong>。针对移动设备的样式融合进了框架的每个角落，而不是增加一个额外的文件。</p>
-  					<p>为了确保适当的绘制和触屏缩放，需要在 <code>&lt;head&gt;</code> 之中<strong>添加 viewport 元数据标签</strong>。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span></code></pre></div>
-  					<p>在移动设备浏览器上，通过为视口（viewport）设置 meta 属性为 <code>user-scalable=no</code> 可以禁用其缩放（zooming）功能。这样禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉。注意，这种方式我们并不推荐所有网站使用，还是要看你自己的情况而定！</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span><span class="nt">&gt;</span></code></pre></div>
-  					<p>在 Bootstrap 2 中，我们对框架中的某些关键部分增加了对移动设备友好的样式。而在 Bootstrap 3 中，我们重写了整个框架，使其一开始就是对移动设备友好的。这次不是简单的增加一些可选的针对移动设备的样式，而是直接融合进了框架的内核中。也就是说，<strong>Bootstrap 是移动设备优先的</strong>。针对移动设备的样式融合进了框架的每个角落，而不是增加一个额外的文件。</p>
-  					<p>为了确保适当的绘制和触屏缩放，需要在 <code>&lt;head&gt;</code> 之中<strong>添加 viewport 元数据标签</strong>。</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span></code></pre></div>
-  					<p>在移动设备浏览器上，通过为视口（viewport）设置 meta 属性为 <code>user-scalable=no</code> 可以禁用其缩放（zooming）功能。这样禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉。注意，这种方式我们并不推荐所有网站使用，还是要看你自己的情况而定！</p>
-					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span><span class="nt">&gt;</span></code></pre></div>
+  					<h1 id="type" class="page-header">CSS代码书写规范</h1>
+  					<h2 id="type-headings">基本书写规范</h2>
+  					<li>代码缩进的基本单位为4个空格，不能使用tab键进行缩进。</li>
+  					<li>每一个声明必须以分号结尾。示例：</li>
+  					<table class="table table-bordered">
+  						<thead>
+  							<tr>
+  								<td class="success" width="50%">Bad Code</td>
+  								<td class="success">Good Code</td>
+  							</tr>
+  						</thead>
+  						<tbody>
+  							<tr>
+  								<td class="active">
+  									<code>
+  										.oso-main-nav{<br>
+    									&nbsp;&nbsp;&nbsp;&nbsp;	width:95%  /*声明后缺少分号*/<br>
+										}
+									</code>
+  								</td>
+								<td class="active">
+									<code>
+  										.oso-main-nav{<br>
+    									&nbsp;&nbsp;&nbsp;&nbsp;	width:95%;<br>
+										}
+									</code>
+								</td>
+  							</tr>
+  						</tbody>
+  					</table>
+  					<li>所有声明都要分行排版。示例：</li>
+  					<table class="table table-bordered">
+  						<thead>
+  							<tr>
+  								<td class="success" width="50%">Bad Code</td>
+  								<td class="success">Good Code</td>
+  							</tr>
+  						</thead>
+  						<tbody>
+  							<tr>
+  								<td class="active">
+  									<code>
+  										.oso-main-nav{width:95%;height:30px; }
+									</code>
+  								</td>
+								<td class="active">
+									<code>
+										.oso-main-nav{<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;	width:95%;<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;	height:30px;<br>
+										}
+
+									</code>
+								</td>
+  							</tr>
+  						</tbody>
+  					</table>
+  					<li>多个选择器共用样式集时，选择器名称须换行排版。示例：</li>
+  					<table class="table table-bordered">
+  						<thead>
+  							<tr>
+  								<td class="success" width="50%">Bad Code</td>
+  								<td class="success">Good Code</td>
+  							</tr>
+  						</thead>
+  						<tbody>
+  							<tr>
+  								<td class="active">
+  									<code>
+  										.oso-main-nav, .oso-main-sub{<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;    ……<br>
+										}<br>
+
+									</code>
+  								</td>
+								<td class="active">
+									<code>
+										.oso-main-nav,<br>
+										.oso-main-sub{<br>
+    									&nbsp;&nbsp;&nbsp;&nbsp;	……<br>
+										}
+
+									</code>
+								</td>
+  							</tr>
+  						</tbody>
+  					</table>
+  					<li>定义尺寸属性时，必须添加单位(0值除外)。示例：</li>
+  					<table class="table table-bordered">
+  						<thead>
+  							<tr>
+  								<td class="success" width="50%">Bad Code</td>
+  								<td class="success">Good Code</td>
+  							</tr>
+  						</thead>
+  						<tbody>
+  							<tr>
+  								<td class="active">
+  									<code>
+  										.oso-button{<br>
+    									&nbsp;&nbsp;&nbsp;&nbsp;	margin:10 0px 5;<br>
+										}
+									</code>
+  								</td>
+								<td class="active">
+									<code>
+										.oso-button{<br>
+    									&nbsp;&nbsp;&nbsp;&nbsp;	margin:10px 0 5px;<br>
+										}
+									</code>
+								</td>
+  							</tr>
+  						</tbody>
+  					</table>
+  					<li>建议属性编写顺序：</li>
+  					<table class="table table-bordered">
+  						<thead>
+  							<tr>
+  								<td class="success" width="10%">顺序</td>
+  								<td class="success">属性</td>
+  							</tr>
+  						</thead>
+  						<tbody>
+  							<tr>
+  								<td class="active">1
+  								</td>
+								<td class="active">
+									位置属性(position, top, right, z-index, display, float等)
+								</td>
+  							</tr>
+  							<tr>
+  								<td class="active">2
+  								</td>
+								<td class="active">
+									大小(width, height, padding, margin)
+								</td>
+  							</tr>
+  							<tr>
+  								<td class="active">3
+  								</td>
+								<td class="active">
+									文本相关(font, line-height, letter-spacing, color- text-align等)
+								</td>
+  							</tr>
+  							<tr>
+  								<td class="active">4
+  								</td>
+								<td class="active">
+									背景(background, border等)
+								</td>
+  							</tr>
+  							<tr>
+  								<td class="active">5
+  								</td>
+								<td class="active">
+									其他(animation, transition等)
+								</td>
+  							</tr>
+  						</tbody>
+  					</table>
+  					<p>示例：</p>
+  					<table class="table table-bordered">
+  						<thead>
+  							<tr>
+  								<td class="success" width="50%">Bad Code</td>
+  								<td class="success">Good Code</td>
+  							</tr>
+  						</thead>
+  						<tbody>
+  							<tr>
+  								<td class="active">
+  									<code>
+  										.oso-example{<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;	color:red;<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;	z-index:-1;<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;	background-color:#9e0;<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;	display:inline-block;<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;	font-size:1.5em;<br>
+										}
+
+									</code>
+  								</td>
+								<td class="active">
+									<code>
+										.oso-example{<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;	z-index:-1;<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;	display:inline-block;<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;	font-size:1.5em;<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;	color:red;<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;	background-color:#9e0;<br>
+										}
+
+									</code>
+								</td>
+  							</tr>
+  						</tbody>
+  					</table>
+  					<li>建议选择器的嵌套层级不大于3级，位置靠后的限定条件应尽可能精确。示例：</li>
+  					<table class="table table-bordered">
+  						<thead>
+  							<tr>
+  								<td class="success" width="50%">Bad Code</td>
+  								<td class="success">Good Code</td>
+  							</tr>
+  						</thead>
+  						<tbody>
+  							<tr>
+  								<td class="active">
+  									<code>
+										.page .header .login #username input {<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;    ……<br>
+										}<br>
+										.comment div * {<br>
+    									&nbsp;&nbsp;&nbsp;&nbsp;	……<br>
+										}
+									</code>
+  								</td>
+								<td class="active">
+									<code>
+										#username input {<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;    ……<br>
+										}<br>
+										.comment .avatar {<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;    ……<br>
+										}
+									</code>
+								</td>
+  							</tr>
+  						</tbody>
+  					</table>
+  					<p>
+  						说明：以上示例中使用了id选择器和通用选择符，这两种选择符在CSS代码中不推荐使用，这里引入只是为了方便举例。
+  					</p>
+  					<h2 id="type-body-copy">代码注释</h2>
+  					<li>CSS代码注释有两种样式：</li>
+  					<p>①单行注释</p>
+  					<div class="highlight">
+  					<pre>
+  					<span class="nt">
+  					/*注释内容*/
+  					</span>
+  					</pre>
+  					</div>
+  					<p>②块注释</p>
+  					<div class="highlight">
+  					<pre>
+  					<span class="nt">
+  					/*===================<br>
+					*第一行注释内容<br>
+					*第二行注释内容<br>
+					====================*/<br>
+  					</span>
+  					</pre>
+  					</div>
+  					<li>文件、模块、CSS规则等的注释，在其上一行使用块注释；声明的注释，在当前行尾使用单行注释。如下例所示：</li>
+  					<div class="highlight">
+  					<pre>
+  					<span class="nt">
+  					/*===================<br>
+					*CSS规则注释内容<br>
+					====================*/<br>
+					.oso-main-nav{<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;	width:100%;<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;	height:30px;<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;	background:url(images/mainMenu_bg.jpg) repeat-x;   /*声明注释内容*/<br>
+					}
+  					</span>
+  					</pre>
+  					</div>
+  					<h2 id="type-inline-text">属性缩写</h2>
+  					<p>CSS中，尽量使用缩写属性代替全写。这样不但能精简代码，同时又能提高用户阅读体验。常见CSS属性缩写如下表所示：</p>
+  					<table class="table table-bordered">
+  						<thead>
+  							<tr>
+  								<td class="success" width="10%">属性</td>
+  								<td class="success" width="34%">全写</td>
+  								<td class="success">缩写</td>
+  							</tr>
+  						</thead>
+  						<tbody>
+  							<tr>
+  								<td class="active">
+  									颜色
+  								</td>
+								<td class="active">
+									#000000<br>
+									#336699
+								</td>
+								<td class="active">
+									#000<br>
+									#369
+								</td>
+  							</tr>
+  							<tr>
+  								<td class="active">
+  									盒尺寸<br>
+  									(margin/padding)
+  								</td>
+								<td class="active">
+									padding-bottom:2px;<br>
+									padding-left:1px;<br>
+									padding-right:1.2px;<br>
+									padding-top:0;
+								</td>
+								<td class="active">
+									/*边框顺序是上右下左*/<br>
+									Padding:0 1.2px 2px 1px;<br>
+								</td>
+  							</tr>
+  							<tr>
+  								<td class="active">
+  									边框
+  								</td>
+								<td class="active">
+									border-width:1px;<br>
+									border-style:solid; <br>
+									border-color:#000; 
+
+								</td>
+								<td class="active">
+									/*语法:border:width style color;*/<br>
+									border:1px solid #000;
+								</td>
+  							</tr>
+  							<tr>
+  								<td class="active">
+  									背景
+  								</td>
+								<td class="active">
+									background-color:#f00;<br>
+									background-image:url(background.gif);<br>
+									background-repeat:no-repeat;<br>
+									background-attachment:fixed;<br>
+									background-position:0 0;
+
+								</td>
+								<td class="active">
+									/*语法:background:color image repeat attachment position;*/<br>
+									background:#f00 url(background.gif) no-repeat fixed 0 0;
+
+								</td>
+  							</tr>
+  							<tr>
+  								<td class="active">
+  									字体
+  								</td>
+								<td class="active">
+									font-style:italic;<br>
+									font-variant:small-caps;<br>
+									font-weight:bold;<br>
+									font-size:1em;<br>
+									line-height:140%;<br>
+									font-family:"LucidaGrande",sans-serif;
+
+								</td>
+								<td class="active">
+									/*语法：font:style variant weight size/line-height family*/<br>
+									font:italic small-caps bold 1em/140% "Lucida Grande",sans-serif;
+
+								</td>
+  							</tr>
+  							<tr>
+  								<td class="active">
+  									列表
+  								</td>
+								<td class="active">
+									list-style-type:square;<br>
+									list-style-position:inside;<br>
+									list-style-image:url(image.gif);
+
+								</td>
+								<td class="active">
+									/*语法:list-style:type position image*/<br>
+									list-style:square inside url(image.gif);
+
+								</td>
+  							</tr>
+  						</tbody>
+  					</table>
 				</div>
 			</div>
 			<!--右侧内容结束-->
