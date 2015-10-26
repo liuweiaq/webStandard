@@ -106,9 +106,12 @@
 				<div class="oso-docs-section">
   					<h1 id="grid" class="page-header">命名规范</h1>
   					<h2 id="grid-intro">术语定义</h2>
-  					<li>Pascal大小写：<br/>将标识符的首字母和后面连接的每个单词的首字母都大写。例如：<code>BackColor</code>。</li>
-  					<li>Camel大小写：<br/>标识符的首字母小写，而每个后面连接的单词的首字母都大写。例如：<code>backColor</code>。</li>
-  					<li>全大写：<br/>标识符的所有字母都大写。例如：<code>PI</code>。</li>
+  					<li>Pascal大小写：</li>
+  					<p>将标识符的首字母和后面连接的每个单词的首字母都大写。例如：<code>BackColor</code>。</p>
+  					<li>Camel大小写：</li>
+  					<p>标识符的首字母小写，而每个后面连接的单词的首字母都大写。例如：<code>backColor</code>。</p>
+  					<li>全大写：</li>
+  					<p>标识符的所有字母都大写。例如：<code>PI</code>。</p>
   					<h2 id="grid-media-queries">命名的基本原则</h2>
   					<li>JavaScript命名的总体原则是：尽量与原生JavaScript中命名规则相同。</li>
   					<li>名称均须使用具有实际含义的英文单词命名，不能使用JavaScript关键字，拒绝使用拼音等中式命名方法，产生歧义。</li>
@@ -117,12 +120,19 @@
   					<li>除常量名称外，其他所有名称两个单词之间均不能用下划线连接。如：<code>first_Name</code>。</li>
 
   					<h2 id="grid-options">各成员命名方法</h2>
-  					<li>JavaScript文件名：<br/>JavaScript文件名应为名词短语，采用Camel命名法。如：<code>countryModel.js</code>。</li>
-  					<li>类名：<br/>类名都是名词短语，采用Pascal命名法。如：<code>Person</code>。</li>
-  					<li>方法(函数)名：<br/>方法采用动词短语，Camel方法进行命名。如：<code>sayHi()</code>。</li>
-  					<li>属性名：<br/>属性名是名词短语，采用Camel方法进行命名。如：<code>name</code>。</li>
-  					<li><p class="oso-distance">变量名：<br/>如无特殊说明，变量名的命名规范符合字段、私有变量、方法参数等的命名要求。<br/>
-  					①变量名均是名词短语，符合Camel命名规范。如：<code>age</code>。<br/>②类的私有字段、私有属性、私有方法等成员的命名须在名称前加下划线(与公有成员进行区分)。如：<code>_height;_getSize()</code>。<br/>③变量名可以加前缀(如下表所示)，表示特定含义。<p>
+  					<li>JavaScript文件名：</li>
+  					<p>JavaScript文件名应为名词短语，采用Camel命名法。如：<code>countryModel.js</code>。</p>
+  					<li>类名：</li>
+  					<p>类名都是名词短语，采用Pascal命名法。如：<code>Person</code>。</p>
+  					<li>方法(函数)名：</li>
+  					<p>方法采用动词短语，Camel方法进行命名。如：<code>sayHi()</code>。</p>
+  					<li>属性名：</li>
+  					<p>属性名是名词短语，采用Camel方法进行命名。如：<code>name</code>。</p>
+  					<li>变量名：</li>
+  					<p>如无特殊说明，变量名的命名规范符合字段、私有变量、方法参数等的命名要求。</p>
+  					<p>①变量名均是名词短语，符合Camel命名规范。如：<code>age</code>。</p>
+  					<p>②类的私有字段、私有属性、私有方法等成员的命名须在名称前加下划线(与公有成员进行区分)。如：<code>_height;_getSize()</code>。</p>
+  					<p>③变量名可以加前缀(如下表所示)，表示特定含义。</p>
 	  				<table class="table table-bordered">
 	  					<thead>
 							<tr>
@@ -169,7 +179,8 @@
 							</tr>
 						</tbody>
 					</table>
-					<p class="oso-distance">注：1)只有当需要特别说明其类型或用途的变量名才加前缀，所加前缀与后面名称组合的变量名要含义清晰；2)切记不要乱用前缀，如<code>strName,numAge</code>等有画蛇添足之嫌；3)前缀名仅限于以上几种，不能使用其他简写前缀名，以免产生歧义。<br/>④在局部变量或参数名中，可以用下表中的简写代表特定的含义。</p>
+					<p class="oso-distance">注：1)只有当需要特别说明其类型或用途的变量名才加前缀，所加前缀与后面名称组合的变量名要含义清晰；2)切记不要乱用前缀，如<code>strName,numAge</code>等有画蛇添足之嫌；3)前缀名仅限于以上几种，不能使用其他简写前缀名，以免产生歧义。</p>
+					<p>④在局部变量或参数名中，可以用下表中的简写代表特定的含义。</p>
 					<table class="table table-bordered">
 						<thead>									
 							<tr>
@@ -197,22 +208,21 @@
 						</tbody>
 					</table>						 
 	  				<p>注：1)在代码中，上述四个名称不能再代表其他的含义；2)只有在局部变量和参数名中才能使用上述简写命名。</p>
-  				</li>
-  				<li>常量名：<br/>常量使用全大写方法命名，且多个单词之间用下划线连接。如<code>PI</code>。</li>				
+  				<li>常量名：</li>
+  				<p>常量使用全大写方法命名，且多个单词之间用下划线连接。如<code>PI</code>。</p>				
   				</div>
 				<div class="oso-docs-section">
   					<h1 id="type" class="page-header">代码注释规范</h1>
   					<h2 id="type-headings">注释原则</h2>
-  						<li>注释形式必须统一<br>
-  						必须使用本文档规定的标点和结构样式来构造注释。注释格式如下：<br>
-  						①单行注释：<br>
+  						<li>注释形式必须统一</li>
+  						<p>必须使用本文档规定的标点和结构样式来构造注释。注释格式如下：</p>
+  						<p>①单行注释：</p>
   						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">//.....</span></code></pre></div>
-  						②块注释：<br>
+  						<p>②块注释：</p>
   						<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">/*.....*/</span></code></pre></div>
-  						</li>
   						<li>注释内容需简单、明了，含义准确。</li>
-  						<li>基本注释(类、方法、属性等的注释)部分需符合JSDoc语法规范。<br>
-  						JSDoc是JavaScript语言的一套代码注释规范，其主要命令名如下表所示：
+  						<li>基本注释(类、方法、属性等的注释)部分需符合JSDoc语法规范。</li>
+  						<p>JSDoc是JavaScript语言的一套代码注释规范，其主要命令名如下表所示：</p>
   							<table class="table table-bordered">
   								<thead>
 								    <tr>
@@ -255,39 +265,35 @@
 									</tr>
 								</tbody>
 							</table>
-							说明：这里我们只是列出了一些常用的标签，更多标签可在<a href="http://code.google.com/p/jsdoc-toolkit/wiki/TagReference">官网</a>查看。	
-  						</li>
+						<p>说明：这里我们只是列出了一些常用的标签，更多标签可在<a href="http://code.google.com/p/jsdoc-toolkit/wiki/TagReference">官网</a>查看。	
+  						</p>
 
   					<h2 id="type-body-copy">注释样式</h2>
   					<p>根据注释内容的不同，代码注释分为基本注释和特殊必加注释两种。这里需要特别说明的一点是：代码中不必每一处都添加注释，但对需要重点说明的地方，一定要合理安排注释内容。</p>
-
-  					<li>基本注释<br>
-  					本文档中，基本注释包括类、方法、属性、主要变量等的注释，这部分内容需要用块注释格式。<br>
-  					①类的注释：<br>
+  					<li>基本注释</li>
+  					<p>本文档中，基本注释包括类、方法、属性、主要变量等的注释，这部分内容需要用块注释格式。</p>
+  					<p>①类的注释：</p>
 					<div class="highlight"><pre><span class="nt">/************************************</span><br><span >* @description 一个Person类</span><br><span >* @param {String} userName 姓名</span><br><span >* @param {Num} age 年龄</span><br><span >* @example new Parent(“张三”,15);</span><br><span class="nt">************************************/</span></pre></div>
-					②方法的注释：<br>
+					<p>②方法的注释：</p>
 					<div class="highlight"><pre><span class="nt">/************************************</span><br><span >* @description 弹出say内容</span><br><span >* @param {String} content 内容</span><br><span >* @return {String} json格式数据</span><br><span class="nt">************************************/</span></pre></div>
-					③属性和字段的注释：
+					<p>③属性和字段的注释：</p>
 					<div class="highlight"><pre><span class="nt">/************************************</span><br><span >* @description 弹出say内容</span><br><span >* @description {Sting} 姓名</span><br><span class="nt">************************************/</span></pre></div>
-					</li>
-  					<li>特殊必加注释<br>
-  					除了基本注释外，代码中有以下情形之一者，也需要添加注释：<br>
-  					①典型算法处；<br>
-  					②代码不明晰处；<br>
-  					③代码修改处需要加上修改标识的地方；<br>
-  					④循环和逻辑分支组成的代码中；<br>
-  					⑤为他人提供的接口。<br>
-  					这部分注释只需用行注释格式，简洁准确地标明注释内容即可。
-  					</li>
+  					<li>特殊必加注释</li>
+  					<p>除了基本注释外，代码中有以下情形之一者，也需要添加注释：</p>
+  					<p>①典型算法处；</p>
+  					<p>②代码不明晰处；</p>
+  					<p>③代码修改处需要加上修改标识的地方；</p>
+  					<p>④循环和逻辑分支组成的代码中；</p>
+  					<p>⑤为他人提供的接口。</p>
+  					<p>这部分注释只需用行注释格式，简洁准确地标明注释内容即可。</p>
 				</div>
 				<div class="oso-docs-section">
   					<h1 id="code" class="page-header">JavaScript及库使用规范</h1>
   					<h2 id="code-inline">原生 JavaScript使用约定</h2>
-  						<li>每一条JavaScript语句都要以分号结束<br>
-  						严格按照语法规范书写代码，保证代码在压缩后不会出错。
-  						</li>
-  						<li>变量定义<br>
-  						在类、方法体顶端定义所有变量，var语句应该为类或方法体内的第一条语句。同时定义多个变量时，省略var关键字，用逗号代替。
+  						<li>每一条JavaScript语句都要以分号结束</li>
+  						<p>严格按照语法规范书写代码，保证代码在压缩后不会出错。</p>
+  						<li>变量定义</li>
+  						<p>在类、方法体顶端定义所有变量，var语句应该为类或方法体内的第一条语句。同时定义多个变量时，省略var关键字，用逗号代替。</p>
   						<table class="table table-bordered">
   							<thead>
 	  							<tr>
@@ -314,9 +320,8 @@
 	  							</tr>
   							</tbody>
   						</table>
-  						</li>
-  						<li>使用”===”代替”==”<br>
-  						JavaScript 使用2种不同的等值运算符：===|!== 和 ==|!=，后者附带强制类型转换，为了避免出现比较时的错误，统一使用前者作为JS代码中的等值运算符。
+  						<li>使用”===”代替”==”</li>
+  						<p>JavaScript 使用2种不同的等值运算符：===|!== 和 ==|!=，后者附带强制类型转换，为了避免出现比较时的错误，统一使用前者作为JS代码中的等值运算符。</p>
   						<table class="table table-bordered">
   							<thead>
 	  							<tr>
@@ -343,9 +348,8 @@
 	  							</tr>
   							</tbody>
   						</table>
-  						</li>
-  						<li>使用 join() 来拼接字符串<br>
-  						在大量的字符串拼接中，应避免使用效率低的"+="方式进行拼接，而改用数组的".join()"方法来拼接字符串。<br>
+  						<li>使用 join() 来拼接字符串</li>
+  						<p>在大量的字符串拼接中，应避免使用效率低的"+="方式进行拼接，而改用数组的".join()"方法来拼接字符串。</p>
   						<table class="table table-bordered">
   							<thead>
 	  							<tr>
@@ -376,8 +380,8 @@
 	  							</tr>
   							</tbody>
   						</table>
-  						</li>
-  						<li>使用{}代替 new Ojbect()，使用[]代替 new Array()<br>对象和数组分别有上述两种创建方式，我们规定统一使用{}和[]来创建对象或数组。
+  						<li>使用{}代替 new Ojbect()，使用[]代替 new Array()</li>
+  						<p>对象和数组分别有上述两种创建方式，我们规定统一使用{}和[]来创建对象或数组。</p>
 						<table class="table table-bordered">
   							<thead>
 	  							<tr>
@@ -402,8 +406,7 @@
 	  							</tr>
   							</tbody>
   						</table>
-  						</li>
-  						<li>尽量避免使用全局变量<br>
+  						<li>尽量避免使用全局变量</li>
   						<table class="table table-bordered">
   							<thead>
 	  							<tr>
@@ -438,9 +441,8 @@
 	  							</tr>
   							</tbody>
   						</table>
-  						</li>
-  						<li><span>选择短路求值<br>
-  						短路求值是一个从左到右求值的表达式，用&&（逻辑与）或 || （逻辑或）操作符。
+  						<li>选择短路求值</li>
+  						<p>短路求值是一个从左到右求值的表达式，用&&（逻辑与）或 || （逻辑或）操作符。</p>
   						<table class="table table-bordered">
   							<thead>
 	  							<tr>
@@ -471,10 +473,9 @@
 	  							</tr>
   							</tbody>
   						</table>
-  						</li>
   					<h2 id="code-block">jquery使用约定</h2>
-					    <li>缓存jquery对象<br>
-					    DOM遍历需要耗费较多资源，所以应将重用jquery对象进行缓存，避免同一段代码中重复进行DOM遍历。
+					    <li>缓存jquery对象</li>
+					    <p>DOM遍历需要耗费较多资源，所以应将重用jquery对象进行缓存，避免同一段代码中重复进行DOM遍历。</p>
 					    <table class="table table-bordered">
   							<thead>
 	  							<tr>
@@ -500,9 +501,8 @@
 	  							</tr>
   							</tbody>
   						</table>
-					    </li>
-					    <li>采用链式写法<br>
-					    采用链式写法时，jquery会自动缓存每一步的结果，比非链式写法（手动缓存）要快。
+					    <li>采用链式写法</li>
+					    <p>采用链式写法时，jquery会自动缓存每一步的结果，比非链式写法（手动缓存）要快。</p>
 					    <table class="table table-bordered">
   							<thead>
 	  							<tr>
@@ -535,11 +535,10 @@
   							</tbody>
   						</table>
   						<p>说明：使用链式的同时，可能带来代码的难以阅读等问题，这时，需要严格按照规范对代码格式进行调整。</p>
-					    </li>
-					    <li>优化选择器<br>
-					    ①优先选择性能高的选择器来确定元素。<br>
+					    <li>优化选择器</li>
+					    <p>①优先选择性能高的选择器来确定元素。</p>
 					    <p>选择器的性能由高到低为：ID选择器和标签元素选择器&gt;类选择器&gt;伪类选择器和属性选择器。</p>
-					    ②选择条件中不要添加额外的选择符。<br>
+					    <p>②选择条件中不要添加额外的选择符。</p>
 					    <table class="table table-bordered">
   							<thead>
 	  							<tr>
@@ -568,7 +567,7 @@
 	  							</tr>
   							</tbody>
   						</table>
-  						③不要使用通用选择符或隐式通用选择符。<br>
+  						<p>③不要使用通用选择符或隐式通用选择符。</p>
   						<table class="table table-bordered">
   							<thead>
 	  							<tr>
@@ -594,9 +593,8 @@
 	  							</tr>
   							</tbody>
   						</table>
-					    </li>
-					    <li>尽量减少DOM结构的改动次数<br>
-					    在大量的DOM操作中，需先把要改动的部分取出来，改动完成后再放回去。
+					    <li>尽量减少DOM结构的改动次数</li>
+					    <p>在大量的DOM操作中，需先把要改动的部分取出来，改动完成后再放回去。</p>
 					    <table class="table table-bordered">
   							<thead>
 	  							<tr>
@@ -629,9 +627,8 @@
 	  							</tr>
   							</tbody>
   						</table>
-					    </li>
-					    <li>使用”on”方法<br>
-					    使用on() 方法作为附加事件处理程序的首选方法。
+					    <li>使用”on”方法</li>
+					    <p>使用on() 方法作为附加事件处理程序的首选方法。</p>
 					    <table class="table table-bordered">
   							<thead>
 	  							<tr>
@@ -666,59 +663,47 @@
 	  							</tr>
   							</tbody>
   						</table>
-					    </li>
 				  	<h2 id="code-appointment">RequireJS使用约定</h2>
-				  		<li>定义模块<br>
-				  		每一个模块均须定义在一个单独的JS文件里(注：本节中，如无特别说明，模块两字均表示这种)，定义形式有以下两种：<br>
-				  		①数据模块<br>
-				  		这类模块不需要依赖其他任何模块，一般用于存放数据。
+				  		<li>定义模块</li>
+				  		<p>每一个模块均须定义在一个单独的JS文件里(注：本节中，如无特别说明，模块两字均表示这种)，定义形式有以下两种：</p>
+				  		<p>①数据模块</p>
+				  		<p>这类模块不需要依赖其他任何模块，一般用于存放数据。</p>
 				  		<div class="highlight"><pre><code class="language-html" data-lang="html"><span >define({</span><br><span >    addUrl:"/Sync10/basicdata/countrys/addCountry",</span><br><span >    modUrl:"/Sync10/basicdata/countrys/updateCountry",</span><br><span >    getUrl:"/Sync10/basicdata/countrys/getCountry"</span><br><span >});</code></pre></div>
 					  	<p id="code-regulation">②代码模块</p>
-					  	被定义的模块需依赖其他模块。除数据模块外，其他模块都使用这种方法定义。
+					  	<p>被定义的模块需依赖其他模块。除数据模块外，其他模块都使用这种方法定义。</p>
 					  	<div class="highlight"><pre><code class="language-html" data-lang="html"><span >define(['module1','module2'],function(m1,m2){</span><br><span >    ......</span><br><span >});</span></code></pre></div>
-				  		</li>
-				  		<li>调用模块<br>
-				  		模块调用根据目的的不同，也有两种调用方式：<br>
-				  		①执行入口<br>
-				  		main.js中的程序执行入口处，用require方法调用模块，其参数与define方法类似。
+				  		<li>调用模块</li>
+				  		<p>模块调用根据目的的不同，也有两种调用方式：</p>
+				  		<p>①执行入口</p>
+				  		<p>main.js中的程序执行入口处，用require方法调用模块，其参数与define方法类似。</p>
 				  		<div class="highlight"><pre><code class="language-html" data-lang="html"><span >require(['requireConfig'],function(requireConfig){</span><br><span >    ......</span><br><span >});</span></code></pre></div>
-				  		②依赖注入<br>
-				  		除以上调用方式外，其他模块均通过依赖注入的方式被新模块调用。调用方式采用本节<a href="#code-regulation">代码模块</a>中的规范。
-				  		</li>
-				  		<li>配置require.js<br>
-				  		require方法本身也是一个对象，它带有一个config方法，用来配置require.js运行参数。
+				  		<p>②依赖注入</p>
+				  		<p>除以上调用方式外，其他模块均通过依赖注入的方式被新模块调用。调用方式采用本节<a href="#code-regulation">代码模块</a>中的规范。</p>
+				  		<li>配置require.js</li>
+				  		<p>require方法本身也是一个对象，它带有一个config方法，用来配置require.js运行参数。</p>
 				  		<div class="highlight"><pre><code data-lang="html"><span>requirejs.config({</span><br><span >    paths:{</span><br><span >        "oso.lib":"/Sync10-ui/lib"</span><br><span>    },</span><br><span >    shim: {</span><br><span>        'jquery.dynamicTable': ['jquery']</span><br><span>    }</span><br><span>});</span></code></pre></div>
-				  		</li>
-				  		<li>模块化总体规范<br>
-				  		除了满足上述模块定义、模块调用以及配置等基本规范外，每一个功能模块(注：功能模块指的是能完成一定功能的程序集，在Backbone框架中，一个功能模块拥有一个SPA页)也需要满足一定要求：<br>
-				  		①每一个功能模块最多只能有一个main.js(程序入口)、一个requireConfig.js(RequireJS的配置文件，可选)、一个config.js(功能模块的配置信息，参考数据模块规范)文件。<br>
-				  		②以上三个文件名称不能随意更改。<br>
-				  		③在main.js中，一般先调用全域RequireJS配置文件。<br>
+				  		<li>模块化总体规范</li>
+				  		<p>除了满足上述模块定义、模块调用以及配置等基本规范外，每一个功能模块(注：功能模块指的是能完成一定功能的程序集，在Backbone框架中，一个功能模块拥有一个SPA页)也需要满足一定要求：</p>
+				  		<p>①每一个功能模块最多只能有一个main.js(程序入口)、一个requireConfig.js(RequireJS的配置文件，可选)、一个config.js(功能模块的配置信息，参考数据模块规范)文件。</p>
+				  		<p>②以上三个文件名称不能随意更改。</p>
+				  		<p>③在main.js中，一般先调用全域RequireJS配置文件。</p>
 				  		<div class="highlight"><pre><code data-lang="html"><span>require(["&lt;UI项目根目录&gt;/requireConfig"], function() { //全域RequireJS配置注入</span><br><span >    require(["&lt;本模块目录&gt; / requireConfig"], function() { //本模块RequireJS配置注入(可选)</span><br><span >        require(["jquery", "models/admin"], function($, AdminModel) {</span><br><span>             ......</span><br><span>        });</span><br><span>    });</span><br><span>});</span></code></pre></div>
-				  		</li>
-
 				  	<h2 id="code-appointment2">Backbone使用约定</h2>
-				  		<li>视图是数据无关的<br>
-				  		数据属于模型或集合，不能在视图或者DOM中存储数据，须做到数据层和视图层的关注点分离。
-				  		</li>
-				  		<li>DOM事件只改变model<br>
-				  		当一个DOM事件触发时，不要让它改变view本身，而是去改变这个model。
-				  		</li>
-				  		<li>DOM只有在model发生改变时才改变<br>
-				  		只有当model发生改变时，才能相应地改变其对应的DOM(或view)。
-				  		</li>
-				  		<li>绑定的东西必须解绑<br>
-				  		当视图从DOM上移除时，使用”remove”方法，视图必须从所绑定的事件上解绑。
-				  		</li>
-				  		<li>视图的作用域<br>
-				  		视图不要操作除它本身以外的DOM。当你需要操作另一个视图时，可以触发一个事件，让其自身去完成。
-				  		</li>
-				  		<li>组件封装<br>
-				  		组件封装时，用暴露view的方式提供接口给用户。如果model为某一view私有，就无需单独写一个model的JS文件，而是把model与view定义在一个命名空间下，封装起来。
-				  		</li>
-				  		<li>Backbone中路由(router)的处理<br>
-				  		在程序中需要根据需求，合理设置Backbone路由，满足客户要求。本文档规定，使用Hash规则设定路由。
-				  		</li>
+				  		<li>视图是数据无关的</li>
+				  		<p>数据属于模型或集合，不能在视图或者DOM中存储数据，须做到数据层和视图层的关注点分离。
+				  		</p>
+				  		<li>DOM事件只改变model</li>
+				  		<p>当一个DOM事件触发时，不要让它改变view本身，而是去改变这个model。</p>
+				  		<li>DOM只有在model发生改变时才改变</li>
+				  		<p>只有当model发生改变时，才能相应地改变其对应的DOM(或view)。</p>
+				  		<li>绑定的东西必须解绑</li>
+				  		<p>当视图从DOM上移除时，使用”remove”方法，视图必须从所绑定的事件上解绑。</p>
+				  		<li>视图的作用域</li>
+				  		<p>视图不要操作除它本身以外的DOM。当你需要操作另一个视图时，可以触发一个事件，让其自身去完成。</p>
+				  		<li>组件封装</li>
+				  		<p>组件封装时，用暴露view的方式提供接口给用户。如果model为某一view私有，就无需单独写一个model的JS文件，而是把model与view定义在一个命名空间下，封装起来。</p>
+				  		<li>Backbone中路由(router)的处理</li>
+				  		<p>在程序中需要根据需求，合理设置Backbone路由，满足客户要求。本文档规定，使用Hash规则设定路由。</p>
 				  	<h2 id="code-iframe">其他JS框架的使用</h2>
 				  		<li>若项目需要再引入其他JS第三方库，须与团队其他成员协商，且经领导同意，才能使用。用以上JS库为基础开发出来的JS插件除外，可以直接使用。
 				  		</li>

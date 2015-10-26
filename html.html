@@ -110,9 +110,7 @@
 					<li>创建移动设备友好的页面，建议指定页面的viewport；</li>
 					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</span></code></pre></div>
 					<li>CSS与采用异步加载时的JavaScript文件均在head中引入，引入时可以不指定type属性；</li>
-					<p>所有的CSS资源均须在head中引入，因为在页面渲染过程中，新的CSS可能导致元素样式的重新计算和绘制而页面闪烁。</p>
-					<p>JavaScript 应当放在页面末尾，或采用异步加载放在head标签中引入，因为将script放在页面中间将阻断页面的渲染。</p>
-					<p>text/css 和 text/javascript 是 type 属性的默认值。</p>
+					<p>所有的CSS资源均须在head中引入，因为在页面渲染过程中，新的CSS可能导致元素样式的重新计算和绘制而页面闪烁。<br>JavaScript 应当放在页面末尾，或采用异步加载放在head标签中引入，因为将script放在页面中间将阻断页面的渲染。<br>text/css 和 text/javascript 是 type 属性的默认值。</p>
 					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;script src="../require.js" data-main="index"&gt;</span><span class="cp">&lt;/script&gt;</span><br><span class="cp">&lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;</span></code></pre></div>
 					<li>HTML标准模板(示例)</li>
 					<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span><br><span class="cp">&lt;html lang="en"&gt;</span><br>    <span class="cp">&lt;head&gt;</span><br>        <span class="cp">&lt;meta charset="UTF-8"&gt;</span><br>        <span class="cp">&lt;meta http-equiv="X-UA-Compatible" content="IE=Edge"&gt;</span><br>        <span class="cp">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</span><br>        <span class="cp">&lt;title&gt;</span>网页标题<span>&lt;/title&gt;</span><br>        <span class="cp">&lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;</span><br>        <span class="cp">&lt;script src="../require.js" data-main="index"&gt;</span><span class="cp">&lt;/script&gt;</span><br>    <span class="cp">&lt;/head&gt;</span><br>    <span class="cp">&lt;body&gt;</span><br>        ...<br>    <span class="cp">&lt;/body&gt;</span><br><span class="cp">&lt;/html&gt;</span></code></pre></div>
