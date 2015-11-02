@@ -99,7 +99,7 @@
 					<li>避免每一行超过80个字符，当一条语句一行写不下时，需要考虑折行书写；</li>
 					<li>代码组织应该清晰易懂，缩进单位为四个空格(或一个tab键)；</li>
 					<li>JavaScript代码应独立保存在后缀名为.js的文件中，不能包含在HTML文件中；</li>
-					<li><code>JavaScript</code>代码须在严格模式(“<code>use strict</code>”)下运行，有关严格模式的要求请查阅相关文档；</li>
+					<li>JavaScript代码须在严格模式(“<code>use strict</code>”)下运行，有关严格模式的要求请查阅文档：<a href="http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html">《JavaScript严格模式详解》</a>；</li>
 					<li>为方便后续代码编写及程序调试，需搭建的基本软件环境有：<code>node.js</code>(JavaScript运行环境，是其他环境运行的基础)、<code>bower</code>(包管理工具)、<code>handlebars.js</code>(JS模板引擎)、<code>grunt</code>(项目构建工具)、<code>Nginx</code>(HTTP和反向代理服务器)等，环境搭建教程见其他相关文档；</li>
 					<li>JS库引入：原则上仅能引用<code>Jquery</code>(JavaScript库)、<code>RequireJS</code>(AMD模块化管理工具)、<code>Backbone</code>(JavaScript的MVC框架)、<code>BootStrap</code>(响应式布局插件)四种JS库，若需要引入其他第三方库, 须与团队其他成员讨论决定。</li>
 				</div>
@@ -207,7 +207,7 @@
 							</tr>
 						</tbody>
 					</table>						 
-	  				<p>注：1)在代码中，上述四个名称不能再代表其他的含义；2)只有在局部变量和参数名中才能使用上述简写命名。</p>
+	  				<p>注：1)只有在局部变量和参数名中才能使用上述简写命名；2)在代码中，上述四个名称不能再代表其他的含义。</p>
   				<li>常量名：</li>
   				<p>常量使用全大写方法命名，且多个单词之间用下划线连接。如<code>PI</code>。</p>				
   				</div>
@@ -265,7 +265,7 @@
 									</tr>
 								</tbody>
 							</table>
-						<p>说明：这里我们只是列出了一些常用的标签，更多标签可在<a href="http://code.google.com/p/jsdoc-toolkit/wiki/TagReference">官网</a>查看。	
+						<p>说明：这里我们只是列出了一些常用的标签，更多标签可查阅<a href="http://code.google.com/p/jsdoc-toolkit/wiki/TagReference">JSDoc相关网站</a>。	
   						</p>
 
   					<h2 id="type-body-copy">注释样式</h2>
@@ -407,6 +407,7 @@
   							</tbody>
   						</table>
   						<li>尽量避免使用全局变量</li>
+  						<p>如果确实有全局变量需求，请改用数据模块、浏览器缓存以及HTML自定义属性等解决。</p>
   						<table class="table table-bordered">
   							<thead>
 	  							<tr>
@@ -666,14 +667,14 @@
 				  	<h2 id="code-appointment">RequireJS使用约定</h2>
 				  		<li>定义模块</li>
 				  		<p>每一个模块均须定义在一个单独的JS文件里(注：本节中，如无特别说明，模块两字均表示这种)，定义形式有以下两种：</p>
-				  		<p>①数据模块</p>
+				  		<p id="data_module">①数据模块</p>
 				  		<p>这类模块不需要依赖其他任何模块，一般用于存放数据。</p>
 				  		<div class="highlight"><pre><code class="language-html" data-lang="html"><span >define({</span><br><span >    addUrl:"/Sync10/basicdata/countrys/addCountry",</span><br><span >    modUrl:"/Sync10/basicdata/countrys/updateCountry",</span><br><span >    getUrl:"/Sync10/basicdata/countrys/getCountry"</span><br><span >});</code></pre></div>
 					  	<p id="code-regulation">②代码模块</p>
 					  	<p>被定义的模块需依赖其他模块。除数据模块外，其他模块都使用这种方法定义。</p>
 					  	<div class="highlight"><pre><code class="language-html" data-lang="html"><span >define(['module1','module2'],function(m1,m2){</span><br><span >    ......</span><br><span >});</span></code></pre></div>
 				  		<li>调用模块</li>
-				  		<p>模块调用根据目的的不同，也有两种调用方式：</p>
+				  		<p>模块调用根据目的不同，也有两种调用方式：</p>
 				  		<p>①执行入口</p>
 				  		<p>main.js中的程序执行入口处，用require方法调用模块，其参数与define方法类似。</p>
 				  		<div class="highlight"><pre><code class="language-html" data-lang="html"><span >require(['requireConfig'],function(requireConfig){</span><br><span >    ......</span><br><span >});</span></code></pre></div>
@@ -684,7 +685,7 @@
 				  		<div class="highlight"><pre><code data-lang="html"><span>requirejs.config({</span><br><span >    paths:{</span><br><span >        "oso.lib":"/Sync10-ui/lib"</span><br><span>    },</span><br><span >    shim: {</span><br><span>        'jquery.dynamicTable': ['jquery']</span><br><span>    }</span><br><span>});</span></code></pre></div>
 				  		<li>模块化总体规范</li>
 				  		<p>除了满足上述模块定义、模块调用以及配置等基本规范外，每一个功能模块(注：功能模块指的是能完成一定功能的程序集，在Backbone框架中，一个功能模块拥有一个SPA页)也需要满足一定要求：</p>
-				  		<p>①每一个功能模块最多只能有一个main.js(程序入口)、一个requireConfig.js(RequireJS的配置文件，可选)、一个config.js(功能模块的配置信息，参考数据模块规范)文件。</p>
+				  		<p>①每一个功能模块最多只能有一个main.js(程序入口)、一个requireConfig.js(RequireJS的配置文件，可选)、一个config.js(功能模块的配置信息，参考<a href="#data_module">数据模块规范</a>)文件。</p>
 				  		<p>②以上三个文件名称不能随意更改。</p>
 				  		<p>③在main.js中，一般先调用全域RequireJS配置文件。</p>
 				  		<div class="highlight"><pre><code data-lang="html"><span>require(["&lt;UI项目根目录&gt;/requireConfig"], function() { //全域RequireJS配置注入</span><br><span >    require(["&lt;本模块目录&gt; / requireConfig"], function() { //本模块RequireJS配置注入(可选)</span><br><span >        require(["jquery", "models/admin"], function($, AdminModel) {</span><br><span>             ......</span><br><span>        });</span><br><span>    });</span><br><span>});</span></code></pre></div>
